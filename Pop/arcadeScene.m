@@ -32,7 +32,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 1) {
+    if (self.lastSpawnTimeInterval > 1.1) {
         self.lastSpawnTimeInterval = 0;
         [self spawnBubble];
     }
