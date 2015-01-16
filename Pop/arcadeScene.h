@@ -16,6 +16,8 @@
     IBOutlet SKSpriteNode *heartThree;
     NSInteger lives;
     int numBubbles;
+    NSTimer *timer;
+    
 }
 
 @end

@@ -116,17 +116,41 @@
     }
     //Extra Life
     else if (bubbleType == 6) {
+        
+        if (lives == 3) {
+            
+            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+        
+        } else {
+            
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleGreen.png"];
         bubble.name = @"lifeBubbleNode";
+        
+        }
     }
 
-NSInteger bubbleType = arc4random() %60;
-
     //Normal
-    else if (bubbleType >= 7) {
+    else if (bubbleType == 7) {
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
         bubble.name = @"BubbleNode";
     }
+
+    else if (bubbleType == 8) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    
+    else if (bubbleType == 9) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    
+    else if (bubbleType == 10) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    
     
     int bubbleSize = arc4random() %30 + 70;
     bubble.size = CGSizeMake(bubbleSize, bubbleSize);
@@ -230,6 +254,14 @@ NSInteger bubbleType = arc4random() %60;
     }
 }
 
+-(void) showActivity {
+    
+            [self spawnBubble];
+            [self spawnBubble];
+            [self spawnBubble];
+    
+    }
+
 -(SKEmitterNode *)pop {
     NSString *firePath = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"sks"];
     
@@ -271,9 +303,12 @@ NSInteger bubbleType = arc4random() %60;
             [self spawnBubble];
             [self spawnBubble];
             [self spawnBubble];
-              [self spawnBubble];
-              [self spawnBubble];
-              [self spawnBubble];
+            
+            timer = [NSTimer scheduledTimerWithTimeInterval: 1.5
+                                                target: self
+                                              selector: @selector(showActivity)
+                                              userInfo: nil
+                                               repeats: YES];
             
         }
         else if ([[touchedNode name] isEqualToString:@"pointBubbleNode"]) {
