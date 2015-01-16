@@ -2,7 +2,7 @@
 //  arcadeScene.m
 //  Pop
 //
-//  Created by Oscar Diplock on 17/09/2014.
+//  Created by David McAfee on 17/09/2014.
 //  Copyright (c) 2014 GRAPHITE. All rights reserved.
 //
 
@@ -32,7 +32,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 1.1) {
+    if (self.lastSpawnTimeInterval > 1.25) {
         self.lastSpawnTimeInterval = 0;
         [self spawnBubble];
     }
@@ -140,16 +140,16 @@
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
         bubble.name = @"BubbleNode";
     }
-    
     else if (bubbleType == 9) {
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
         bubble.name = @"BubbleNode";
     }
-    
     else if (bubbleType == 10) {
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
         bubble.name = @"BubbleNode";
     }
+    
+    
     
     
     int bubbleSize = arc4random() %30 + 70;
@@ -194,10 +194,10 @@
         minDuration = 1.4;
     }
     else {
-        minDuration = 1.2;
+        minDuration = 1.3;
     }
     
-    int maxDuration = minDuration + 2.0;
+    int maxDuration = minDuration + 2.5;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
@@ -304,11 +304,13 @@
             [self spawnBubble];
             [self spawnBubble];
             
-            timer = [NSTimer scheduledTimerWithTimeInterval: 1.5
+
+            timer = [NSTimer scheduledTimerWithTimeInterval: 1.9
                                                 target: self
                                               selector: @selector(showActivity)
                                               userInfo: nil
                                                repeats: YES];
+
             
         }
         else if ([[touchedNode name] isEqualToString:@"pointBubbleNode"]) {
@@ -349,6 +351,8 @@
         [self loseAction];
     }
 }
+
+
 
 -(void)loseAction {
     SKAction * loseAction = [SKAction runBlock:^{
