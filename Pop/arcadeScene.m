@@ -97,7 +97,7 @@
     
     SKSpriteNode *bubble;
     
-    NSInteger bubbleType = arc4random() %20;
+    NSInteger bubbleType = arc4random() %10;
     
     //Red Bubble
     if (bubbleType <= 3) {
@@ -119,6 +119,9 @@
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleGreen.png"];
         bubble.name = @"lifeBubbleNode";
     }
+
+NSInteger bubbleType = arc4random() %60;
+
     //Normal
     else if (bubbleType >= 7) {
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
@@ -268,9 +271,13 @@
             [self spawnBubble];
             [self spawnBubble];
             [self spawnBubble];
+              [self spawnBubble];
+              [self spawnBubble];
+              [self spawnBubble];
+            
         }
         else if ([[touchedNode name] isEqualToString:@"pointBubbleNode"]) {
-            additionInt = 3;
+            additionInt = 2;
             
         }
         else if ([[touchedNode name] isEqualToString:@"lifeBubbleNode"]) {
