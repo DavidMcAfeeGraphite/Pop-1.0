@@ -2,7 +2,7 @@
 //  arcadeScene.m
 //  Pop
 //
-//  Created by Oscar Diplock on 17/09/2014.
+//  Created by David McAfee and Oscar Diplock.
 //  Copyright (c) 2014 GRAPHITE. All rights reserved.
 //
 
@@ -258,8 +258,8 @@
     
             [self spawnBubble];
             [self spawnBubble];
-            [self spawnBubble];
-    
+
+     [self spawnBubble];
     }
 
 -(SKEmitterNode *)pop {
