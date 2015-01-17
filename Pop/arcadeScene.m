@@ -32,7 +32,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 1.1) {
+    if (self.lastSpawnTimeInterval > 0.85) {
         self.lastSpawnTimeInterval = 0;
         [self spawnBubble];
     }
@@ -170,31 +170,31 @@
         minDuration = 3.0;
     }
     else if (numBubbles <= 20 || numBubbles >= 11) {
-        minDuration = 2.8;
+        minDuration = 2.9;
     }
     else if (numBubbles <= 30 || numBubbles >= 21) {
-        minDuration = 2.6;
+        minDuration = 2.8;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 2.4;
+        minDuration = 2.7;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 2.2;
+        minDuration = 2.5;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 2.0;
+        minDuration = 2.3;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
-        minDuration = 1.8;
+        minDuration = 2.1;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.6;
+        minDuration = 1.8;
     }
     else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.4;
+        minDuration = 1.5;
     }
     else {
-        minDuration = 1.2;
+        minDuration = 1.5;
     }
     
     int maxDuration = minDuration + 2.0;
@@ -258,8 +258,8 @@
     
             [self spawnBubble];
             [self spawnBubble];
+            NSLog(@"Second wave");
 
-     [self spawnBubble];
     }
 
 -(SKEmitterNode *)pop {
@@ -308,7 +308,7 @@
                                                 target: self
                                               selector: @selector(showActivity)
                                               userInfo: nil
-                                               repeats: YES];
+                                               repeats: NO];
             
         }
         else if ([[touchedNode name] isEqualToString:@"pointBubbleNode"]) {

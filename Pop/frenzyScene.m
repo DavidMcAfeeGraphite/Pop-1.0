@@ -2,7 +2,7 @@
 //  frenzyScene.m
 //  Pop
 //
-//  Created by Oscar Diplock on 18/09/2014.
+//  Created by Oscar Diplock and David McAfee.
 //  Copyright (c) 2014 GRAPHITE. All rights reserved.
 //
 
@@ -32,7 +32,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 0.5) {
+    if (self.lastSpawnTimeInterval > 0.45) {
         self.lastSpawnTimeInterval = 0;
         if (isAlertViewActive == NO) {
             [self spawnBubble];
@@ -127,10 +127,10 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 1.70;
+        minDuration = 1.8;
     }
     else if (numBubbles <= 30 || numBubbles >= 11) {
-        minDuration = 1.65;
+        minDuration = 1.70;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
         minDuration = 1.60;

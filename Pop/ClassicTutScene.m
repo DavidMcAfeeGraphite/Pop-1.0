@@ -2,7 +2,7 @@
 //  ClassicTutScene.m
 //  Pop
 //
-//  Created by Oscar Diplock on 18/09/2014.
+//  Created by Oscar Diplock and David McAfee.
 //  Copyright (c) 2014 GRAPHITE. All rights reserved.
 //
 
