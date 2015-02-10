@@ -169,8 +169,6 @@
 }
 
 
-
-
 -(void)showActivity {
     
     NSLog(@"triggered");
@@ -198,7 +196,6 @@
     
     
 }
-
 
 
 - (BOOL)prefersStatusBarHidden {return YES;}
@@ -273,17 +270,17 @@
     
     NSString *deviceType = [UIDevice currentDevice].model;
     
-    if([deviceType hasPrefix:@"iPad"])
-    {
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Pop" message:@"Pop has not been specifically optimised for iPad and as such you may experience unusual or strange graphical behaviour. For best gameplay results, play Pop on your iPhone or iPod touch."  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
-
-        
-    } else {
-        
-        NSLog(@"iPhone dawg");
-    }
+//    if([deviceType hasPrefix:@"iPad"])
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle:@"Pop" message:@"Pop has not been specifically optimised for iPad and as such you may experience unusual or strange graphical behaviour. For best gameplay results, play Pop on your iPhone or iPod touch."  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        [alert show];
+//
+//        
+//    } else {
+//        
+//        NSLog(@"iPhone dawg");
+//    }
     
     BOOL ranBefore14 = [[NSUserDefaults standardUserDefaults]boolForKey:@"RanBefore14"];
     if(!ranBefore14) {

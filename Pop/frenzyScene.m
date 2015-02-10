@@ -8,6 +8,7 @@
 
 #import "frenzyScene.h"
 #import "FrenzyGameOverScene.h"
+#import <AudioToolbox/AudioServices.h>
 
 @interface frenzyScene ()
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
@@ -32,7 +33,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 0.45) {
+    if (self.lastSpawnTimeInterval > 0.30) {
         self.lastSpawnTimeInterval = 0;
         if (isAlertViewActive == NO) {
             [self spawnBubble];
@@ -127,33 +128,33 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 1.8;
+        minDuration = 2.20;
     }
     else if (numBubbles <= 30 || numBubbles >= 11) {
-        minDuration = 1.70;
+        minDuration = 2.05;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 1.60;
+        minDuration = 1.85;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 1.55;
+        minDuration = 1.70;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
         minDuration = 1.50;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
-        minDuration = 1.30;
+        minDuration = 1.45;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.30;
+        minDuration = 1.45;
     }
     else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.30;
+        minDuration = 1.45;
     } else if (numBubbles <= 130 || numBubbles >= 91) {
-        minDuration = 1.30;
+        minDuration = 1.45;
     }
     else {
-        minDuration = 1.20;
+        minDuration = 1.42;
     }
     
     int maxDuration = minDuration + 2.1;
@@ -171,7 +172,7 @@
             [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"frenzyLastScore"];
             SKScene * gameOverScene = [[FrenzyGameOverScene alloc] initWithSize:self.size won:NO];
             
-
+            NSLog(@"event");
             [self.view presentScene:gameOverScene transition: reveal];
             
           
@@ -181,7 +182,7 @@
             NSInteger lastScore = [myLabel.text integerValue];
             [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"frenzyLastScore"];
             SKScene * gameOverScene = [[FrenzyGameOverScene alloc] initWithSize:self.size won:YES];
-            
+            NSLog(@"event");
             [self.view presentScene:gameOverScene transition: reveal];
         }
     }];

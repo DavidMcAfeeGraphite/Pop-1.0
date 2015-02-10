@@ -117,7 +117,18 @@
         highScoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         highScoreLabel.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         highScoreLabel.fontColor = [SKColor lightTextColor];
-        highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2+240);
+        NSString *deviceType = [UIDevice currentDevice].model;
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +200);
+            NSLog(@"iPad");
+            
+        } else {
+            highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +240);
+            NSLog(@"iPhone");
+        }
+
+    
         highScoreLabel.name = @"highScoreLabel";
         [self addChild:highScoreLabel];
         
@@ -128,7 +139,15 @@
         lastScoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         lastScoreLabel.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         lastScoreLabel.fontColor = [SKColor lightTextColor];
-        lastScoreLabel.position = CGPointMake(self.size.width/2 -110, self.size.height/2+240);
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            lastScoreLabel.position = CGPointMake(self.size.width/2 -110, self.size.height/2 +200);
+        }
+        else {
+            lastScoreLabel.position = CGPointMake(self.size.width/2 -110, self.size.height/2 +240);
+            NSLog(@"iPhone");
+        }
+
         lastScoreLabel.name = @"lastScoreLabel";
         [self addChild:lastScoreLabel];
         
@@ -240,7 +259,7 @@
             
            
             
-            [tweetSheet setInitialText: [NSString stringWithFormat:@"Can you beat my Pop high score in classic mode? Get Pop for iOS. I got a score of %1d. https://itunes.apple.com/us/app/pop/id950936583?mt=8",(long)highScore]] ;
+            [tweetSheet setInitialText: [NSString stringWithFormat:@"Can you beat my Pop high score in classic mode? Get Pop for iOS. I got a score of %1d. https://itunes.apple.com/au/app/pop-the-addictive-bubble-game/id921264311?mt=8",(long)highScore]] ;
             
             
             
@@ -312,7 +331,7 @@
             
             
             
-            [tweetSheet setInitialText: [NSString stringWithFormat:@"Can you beat my Pop high score in classic mode? Get Pop for iOS. I got a score of %1d.  https://itunes.apple.com/us/app/pop/id950936583?mt=8",(long)highScore]] ;
+            [tweetSheet setInitialText: [NSString stringWithFormat:@"Can you beat my Pop high score in classic mode? Get Pop for iOS. I got a score of %1d.  https://itunes.apple.com/au/app/pop-the-addictive-bubble-game/id921264311?mt=8",(long)highScore]] ;
             
             
             

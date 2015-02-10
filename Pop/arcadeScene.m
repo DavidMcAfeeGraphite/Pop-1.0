@@ -9,6 +9,8 @@
 #import "arcadeScene.h"
 #import "ArcadeGameOverScene.h"
 
+#import <AudioToolbox/AudioServices.h>
+
 @interface arcadeScene ()
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
@@ -32,7 +34,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 0.85) {
+    if (self.lastSpawnTimeInterval > 0.36) {
         self.lastSpawnTimeInterval = 0;
         [self spawnBubble];
     }
@@ -100,14 +102,74 @@
     NSInteger bubbleType = arc4random() %10;
     
     //Red Bubble
-    if (bubbleType <= 3) {
+    if (bubbleType <= 1) {
         bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleRed.png"];
         bubble.name = @"badBubbleNode";
     }
+    else if (bubbleType == 2) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    else if (bubbleType == 3) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    
     //swarm
     else if (bubbleType == 4) {
-        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleBlue.png"];
-        bubble.name = @"swarmBubbleNode";
+        
+        NSInteger randomNumber = arc4random() % 10;
+        
+        switch (randomNumber)
+        {
+            case 0:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+            case 1:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+            case 2:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+            case 3:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+            case 4:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+            case 5:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+                
+            case 6:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+                
+            case 7:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+                
+            case 8:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                bubble.name = @"BubbleNode";
+                break;
+                
+            case 9:
+                bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleBlue.png"];
+                bubble.name = @"swarmBubbleNode";
+                break;
+                
+        }
+        
+        
     }
     //point
     else if (bubbleType == 5) {
@@ -117,16 +179,16 @@
     //Extra Life
     else if (bubbleType == 6) {
         
-        if (lives == 3) {
+        if (lives == 1) {
             
-            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
-        bubble.name = @"BubbleNode";
-        
+            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleGreen.png"];
+            bubble.name = @"lifeBubbleNode";
+            
         } else {
             
-        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleGreen.png"];
-        bubble.name = @"lifeBubbleNode";
-        
+            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+            bubble.name = @"BubbleNode";
+            
         }
     }
 
@@ -167,31 +229,31 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 3.0;
+        minDuration = 3.5;
     }
     else if (numBubbles <= 20 || numBubbles >= 11) {
-        minDuration = 2.9;
+        minDuration = 3.2;
     }
     else if (numBubbles <= 30 || numBubbles >= 21) {
-        minDuration = 2.8;
+        minDuration = 3.0;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 2.7;
+        minDuration = 2.8;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 2.5;
+        minDuration = 2.6;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 2.3;
+        minDuration = 2.4;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
-        minDuration = 2.1;
+        minDuration = 2.2;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.8;
+        minDuration = 2.1;
     }
     else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.5;
+        minDuration = 1.8;
     }
     else {
         minDuration = 1.5;
@@ -209,16 +271,23 @@
             if (lives == 3) {
                 heartOne.texture = [SKTexture textureWithImageNamed:@"heartBroken.png"];
                 lives = 2;
+                
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             }
             else if (lives == 2) {
                 heartTwo.texture = [SKTexture textureWithImageNamed:@"heartBroken.png"];
                 lives = 1;
+                
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             }
             else if (lives == 1) {
                 heartThree.texture = [SKTexture textureWithImageNamed:@"heartBroken.png"];
                 lives = 0;
+                
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             }
             else {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                 NSInteger lastScore = [myLabel.text integerValue];
                 [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"arcLastScore"];
                 SKScene * gameOverScene = [[ArcadeGameOverScene alloc] initWithSize:self.size won:NO];
@@ -229,16 +298,24 @@
             if (lives == 3) {
                 heartOne.texture = [SKTexture textureWithImageNamed:@"heartBroken.png"];
                 lives = 2;
+                
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                
             }
             else if (lives == 2) {
                 heartTwo.texture = [SKTexture textureWithImageNamed:@"heartBroken.png"];
                 lives = 1;
+                
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             }
             else if (lives == 1) {
                 heartThree.texture = [SKTexture textureWithImageNamed:@"heartBroken.png"];
                 lives = 0;
+                
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             }
             else {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                 NSInteger lastScore = [myLabel.text integerValue];
                 [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"arcLastScore"];
                 SKScene * gameOverScene = [[ArcadeGameOverScene alloc] initWithSize:self.size won:YES];
@@ -257,10 +334,81 @@
 -(void) showActivity {
     
             [self spawnBubble];
-            [self spawnBubble];
+    [self spawnBubble];
+            [self spawnBubble2];
             NSLog(@"Second wave");
 
     }
+
+-(void)spawnBubble2{
+    
+    SKSpriteNode *bubble;
+    
+    NSInteger bubbleType = arc4random() %10;
+    
+    //Bubble
+    if (bubbleType <=2) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+        
+        
+    }
+    
+    else if (bubbleType == 3) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleDavid.png"];
+        bubble.name = @"pointBubbleNode";
+    }
+    
+    else if (bubbleType == 4) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    
+    //point
+    else if (bubbleType == 5) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleDavid.png"];
+        bubble.name = @"pointBubbleNode";
+    }
+    //Extra Life
+    else if (bubbleType == 6) {
+        
+        if (lives == 1) {
+            
+            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleGreen.png"];
+            bubble.name = @"lifeBubbleNode";
+            
+        } else {
+        
+            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+            bubble.name = @"BubbleNode";
+            
+        }
+    }
+    
+    //Normal
+    else if (bubbleType == 7) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+    
+    else if (bubbleType == 8) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleDavid.png"];
+        bubble.name = @"pointBubbleNode";
+    }
+    
+    else if (bubbleType == 9) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleDavid.png"];
+        bubble.name = @"pointBubbleNode";
+    }
+    
+    else if (bubbleType == 10) {
+        bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        bubble.name = @"BubbleNode";
+    }
+}
+
+
+
 
 -(SKEmitterNode *)pop {
     NSString *firePath = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"sks"];
@@ -303,8 +451,10 @@
             [self spawnBubble];
             [self spawnBubble];
             [self spawnBubble];
+            [self spawnBubble2];
+            [self spawnBubble];
             
-            timer = [NSTimer scheduledTimerWithTimeInterval: 1.5
+            timer = [NSTimer scheduledTimerWithTimeInterval: 0.75
                                                 target: self
                                               selector: @selector(showActivity)
                                               userInfo: nil
@@ -387,6 +537,8 @@
                 lives = 0;
             }
             else {
+                
+                
                 NSInteger lastScore = [myLabel.text integerValue];
                 [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"arcLastScore"];
                 SKScene * gameOverScene = [[ArcadeGameOverScene alloc] initWithSize:self.size won:YES];

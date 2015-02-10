@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="mikado_bold (1).ttf">
+        <mutableArray key="mikado_bold.ttf">
             <string>Mikado</string>
         </mutableArray>
     </customFonts>

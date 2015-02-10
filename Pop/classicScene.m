@@ -9,6 +9,8 @@
 #import "classicScene.h"
 #import "GameOverScene.h"
 #import "ClassicTutScene.h"
+#import <AudioToolbox/AudioServices.h>
+
 
 @interface classicScene ()
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
@@ -33,7 +35,7 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 0.6) {
+    if (self.lastSpawnTimeInterval > 0.55) {
         self.lastSpawnTimeInterval = 0;
         if (isAlertViewActive == NO) {
             [self spawnBubble];
@@ -149,12 +151,14 @@
             NSInteger lastScore = [myLabel.text integerValue];
             [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"lastScore"];
             SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.size won:NO];
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             [self.view presentScene:gameOverScene transition: reveal];
         }
         else {
             NSInteger lastScore = [myLabel.text integerValue];
             [[NSUserDefaults standardUserDefaults] setInteger:lastScore forKey:@"lastScore"];
             SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.size won:YES];
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             [self.view presentScene:gameOverScene transition: reveal];
         }
     }];

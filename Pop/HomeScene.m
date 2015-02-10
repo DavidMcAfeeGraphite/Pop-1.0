@@ -33,7 +33,21 @@
         
         adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
         
+        
+        NSString *deviceType = [UIDevice currentDevice].model;
+        
+            if([deviceType hasPrefix:@"iPad"])
+            {
+                NSLog(@"iPad");
+        
+                //adView.frame = CGRectOffset(adView.frame, 50, 380);
+                
+            } else {
         adView.frame = CGRectOffset(adView.frame, 0, -50);
+                NSLog(@"iPhone");
+        
+            }
+        
         
         SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"background_with_icons.png"];
         backPic.size = CGSizeMake(self.size.width, self.size.height);
@@ -50,7 +64,7 @@
         
         SKSpriteNode *classicMode = [SKSpriteNode spriteNodeWithImageNamed:@"button_classic.png"];
         classicMode.size = CGSizeMake(170, 100);
-        classicMode.position = CGPointMake(self.size.width/2, self.size.height/2+60);
+        classicMode.position = CGPointMake(self.size.width/2, self.size.height/2+65);
         classicMode.name = @"classicMode";
         [self addChild:classicMode];
         
@@ -66,7 +80,7 @@
         
         SKSpriteNode *arcadeMode = [SKSpriteNode spriteNodeWithImageNamed:@"button_arcade.png"];
         arcadeMode.size = CGSizeMake(160, 100);
-        arcadeMode.position = CGPointMake(self.size.width/2, self.size.height/2-70);
+        arcadeMode.position = CGPointMake(self.size.width/2, self.size.height/2-50);
         arcadeMode.name = @"arcadeMode";
         [self addChild:arcadeMode];
         
@@ -82,7 +96,7 @@
         
         SKSpriteNode *frenzyMode = [SKSpriteNode spriteNodeWithImageNamed:@"button_frenzy.png"];
         frenzyMode.size = CGSizeMake(160, 100);
-        frenzyMode.position = CGPointMake(self.size.width/2, self.size.height/2-200);
+        frenzyMode.position = CGPointMake(self.size.width/2, self.size.height/2-165);
         frenzyMode.name = @"frenzyMode";
         [self addChild:frenzyMode];
         
