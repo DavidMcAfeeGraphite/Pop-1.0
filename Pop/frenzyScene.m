@@ -140,21 +140,21 @@
         minDuration = 1.80;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 1.65;
+        minDuration = 1.5;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
-        minDuration = 1.60;
+        minDuration = 1.35;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.55;
+        minDuration = 1.30;
     }
     else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.50;
+        minDuration = 1.25;
     } else if (numBubbles <= 130 || numBubbles >= 91) {
-        minDuration = 1.49;
+        minDuration = 1.15;
     }
     else {
-        minDuration = 1.65;
+        minDuration = 1.0;
     }
     
     int maxDuration = minDuration + 2.3;

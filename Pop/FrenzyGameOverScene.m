@@ -116,9 +116,18 @@
         highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +200);
             NSLog(@"iPad");
             
-        } else {
+        }
+    else if([deviceType hasPrefix:@"iPhone4"])
+        {
+        highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +200);
+            NSLog(@"iPhone 4s");
+            
+        }
+     
+      
+        else {
            highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +240);
-            NSLog(@"iPhone");
+            NSLog(@"iPhone 5 or higher");
         }
             
         highScoreLabel.name = @"highScoreLabel";
@@ -178,21 +187,27 @@
         
         UIImageView *load = [[UIImageView alloc] initWithImage:nil];
         load.image = [UIImage imageNamed:@"tutorial_frenzy.png"];
-        load.frame = CGRectMake(0,0, 320, 570);
-        [self.view addSubview:load];
+        
+                
+                NSString *deviceType = [UIDevice currentDevice].model;
+        if([deviceType hasPrefix:@"iPad"]){
+            
+            load.frame = CGRectMake(0,0, 320, 480);
+            }
+        else if ([deviceType hasPrefix:@"iPhone4"]) {
+            
+            load.frame = CGRectMake(0,0,320,480);
+            }
+        
+        else {load.frame = CGRectMake(0,0, 320, 570);
+        }
+    
+    [self.view addSubview:load];
         
         load.alpha = 1;
         
         
-        
-        [UIView animateWithDuration:0.9 delay:1.5 options:0 animations:^{
-            
-            load.alpha = 0.0;
-        } completion:^(BOOL finished) {
-            load.hidden = YES;
-        }];
-        
-        
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewHide:)];
         
         
     }
@@ -367,6 +382,14 @@
          ];
     }
 }
+
+-(void)viewHide:(UITapGestureRecognizer*)sender {
+    
+      load.alpha=0;
+      NSLog(@"View gone");
+      load.hidden =YES;
+      
+    }
 
 -(SKEmitterNode *)pop {
     NSString *popPath = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"sks"];

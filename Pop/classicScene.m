@@ -124,22 +124,22 @@
         minDuration = 2.4;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 2.1;
+        minDuration = 1.6;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
-        minDuration = 1.8;
+        minDuration = 1.4;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.7;
+        minDuration = 1.2;
     }
-    else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.6;
+else if (numBubbles <= 90 || numBubbles >= 81) {
+        minDuration = 1.15;
     }
     else {
-        minDuration = 1.6;
+        minDuration = 1.0;
     }
     
-    int maxDuration = minDuration + 2.3;
+    int maxDuration = minDuration + 2.1;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
