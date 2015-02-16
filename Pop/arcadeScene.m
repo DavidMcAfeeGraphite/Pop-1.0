@@ -8,7 +8,7 @@
 
 #import "arcadeScene.h"
 #import "ArcadeGameOverScene.h"
-
+#import "UIButton+Extensions.h"
 #import <AudioToolbox/AudioServices.h>
 
 @interface arcadeScene ()
@@ -214,14 +214,14 @@
     }
     
     
-    int bubbleSize = arc4random() %30 + 70;
+    int bubbleSize = arc4random() %15 + 80;
     bubble.size = CGSizeMake(bubbleSize, bubbleSize);
     
     int midPt = self.frame.size.width-bubble.size.width;
     int midPtVert = -self.frame.size.height-bubble.size.height/2;
     int xPt = arc4random() %midPt + bubble.size.width/2;
     bubble.position = CGPointMake(xPt, midPtVert);
-    
+   
     [self addChild:bubble];
     
     numBubbles++;
@@ -229,13 +229,13 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 3.5;
+        minDuration = 5.0;
     }
     else if (numBubbles <= 20 || numBubbles >= 11) {
-        minDuration = 3.2;
+        minDuration = 4.2;
     }
     else if (numBubbles <= 30 || numBubbles >= 21) {
-        minDuration = 3.0;
+        minDuration = 3.7;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
         minDuration = 2.8;
@@ -256,7 +256,7 @@
         minDuration = 1.8;
     }
     else {
-        minDuration = 1.5;
+        minDuration = 1.75;
     }
     
     int maxDuration = minDuration + 2.0;
@@ -335,7 +335,7 @@
     
             [self spawnBubble];
     [self spawnBubble];
-            [self spawnBubble2];
+    
             NSLog(@"Second wave");
 
     }
@@ -443,7 +443,7 @@
         
         [touchedNode removeFromParent];
         
-        SKAction *wait = [SKAction waitForDuration:0.5];
+        SKAction *wait = [SKAction waitForDuration:0.2];
         SKAction *remove = [SKAction removeFromParent];
         [explosion runAction:[SKAction sequence:@[wait, remove]]];
         
@@ -451,7 +451,7 @@
             [self spawnBubble];
             [self spawnBubble];
             [self spawnBubble];
-            [self spawnBubble2];
+           
             [self spawnBubble];
             
             timer = [NSTimer scheduledTimerWithTimeInterval: 0.75

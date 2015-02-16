@@ -36,6 +36,7 @@
 		631A60E31A4D712E0002702E /* 4load.png in Resources */ = {isa = PBXBuildFile; fileRef = 631A60E21A4D712E0002702E /* 4load.png */; };
 		631AA4D71A33335700527F16 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 631AA4D61A33335700527F16 /* GameCenterManager.m */; };
 		631DC9B31A46D4B3000F9FD5 /* Game-Center-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 631DC9B21A46D4B3000F9FD5 /* Game-Center-icon.png */; };
+		633B3DF81A8B04F5008A72BD /* UIButton+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 633B3DF71A8B04F5008A72BD /* UIButton+Extensions.m */; };
 		633C99B61A4A9CAD0017EA2A /* pop_icon_87.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99B51A4A9CAD0017EA2A /* pop_icon_87.png */; };
 		633C99BC1A4A9DFD0017EA2A /* background_with_icons.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99BB1A4A9DFD0017EA2A /* background_with_icons.png */; };
 		633C99BE1A4A9E070017EA2A /* button_arcade.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99BD1A4A9E060017EA2A /* button_arcade.png */; };
@@ -135,6 +136,8 @@
 		631AA4D61A33335700527F16 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = "../../../Documents/XCode Projects/Tappy Balls /TappyPlanes/GameCenterManager.m"; sourceTree = "<group>"; };
 		631AA4D81A33338C00527F16 /* AppSpecificValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppSpecificValues.h; path = "../../../Documents/XCode Projects/Tappy Balls /TappyPlanes/AppSpecificValues.h"; sourceTree = "<group>"; };
 		631DC9B21A46D4B3000F9FD5 /* Game-Center-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game-Center-icon.png"; sourceTree = "<group>"; };
+		633B3DF61A8B04F5008A72BD /* UIButton+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extensions.h"; sourceTree = "<group>"; };
+		633B3DF71A8B04F5008A72BD /* UIButton+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extensions.m"; sourceTree = "<group>"; };
 		633C99B51A4A9CAD0017EA2A /* pop_icon_87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_icon_87.png; sourceTree = "<group>"; };
 		633C99BB1A4A9DFD0017EA2A /* background_with_icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_with_icons.png; sourceTree = "<group>"; };
 		633C99BD1A4A9E060017EA2A /* button_arcade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_arcade.png; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 				634A62391A666488008210DB /* button_twitter.png */,
 				6308B42A1A5FBEA900EAAF40 /* bubbleDavid.png */,
 				631A60E21A4D712E0002702E /* 4load.png */,
+				633B3DF61A8B04F5008A72BD /* UIButton+Extensions.h */,
+				633B3DF71A8B04F5008A72BD /* UIButton+Extensions.m */,
 				EEFBC0F019CA392A00CF1935 /* Frenzy Mode */,
 				EEFBC0E519C9839000CF1935 /* Classic Mode */,
 				EEFBC0E419C9838000CF1935 /* Arcade Mode */,
@@ -569,6 +574,7 @@
 				EEFBC0D419C965C300CF1935 /* arcadeScene.m in Sources */,
 				EEFBC0EC19CA390E00CF1935 /* frenzyScene.m in Sources */,
 				EEFBC0CD19C945F200CF1935 /* HomeScene.m in Sources */,
+				633B3DF81A8B04F5008A72BD /* UIButton+Extensions.m in Sources */,
 				EE96E1CB19C83186000FDA73 /* GameOverScene.m in Sources */,
 				EE96E1C819C7F551000FDA73 /* ViewController.m in Sources */,
 				EEFBC0D719C9666300CF1935 /* ArcadeGameOverScene.m in Sources */,

@@ -72,7 +72,7 @@
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval: 0.5
+    timer = [NSTimer scheduledTimerWithTimeInterval: 0.7
                                                 target: self
                                               selector: @selector(showActivity)
                                               userInfo: nil

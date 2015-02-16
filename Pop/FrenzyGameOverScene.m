@@ -210,7 +210,7 @@
         
         [self runAction:[SKAction playSoundFileNamed:@"pop.mp3" waitForCompletion:NO]];
         
-        SKAction *wait = [SKAction waitForDuration:0.5];
+        SKAction *wait = [SKAction waitForDuration:0.3];
         SKAction *remove = [SKAction removeFromParent];
 
         if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
@@ -288,7 +288,7 @@
             
             [self runAction:[SKAction playSoundFileNamed:@"pop.mp3" waitForCompletion:NO]];
             
-            SKAction *wait = [SKAction waitForDuration:0.5];
+            SKAction *wait = [SKAction waitForDuration:0.3];
             SKAction *remove = [SKAction removeFromParent];
 
             

@@ -92,7 +92,7 @@
 -(void)spawnBubble{
     SKSpriteNode *bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
     
-    int bubbleSize = arc4random() %30 + 70;
+    int bubbleSize = arc4random() %15 + 80;
     bubble.size = CGSizeMake(bubbleSize, bubbleSize);
     
     int midPt = self.frame.size.width-bubble.size.width;
@@ -109,37 +109,37 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 3.0;
+        minDuration = 5.0;
     }
     else if (numBubbles <= 20 || numBubbles >= 11) {
-        minDuration = 2.8;
+        minDuration = 3.8;
     }
     else if (numBubbles <= 30 || numBubbles >= 21) {
-        minDuration = 2.6;
+        minDuration = 3.0;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 2.4;
+        minDuration = 2.6;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 2.2;
+        minDuration = 2.4;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 2.0;
+        minDuration = 2.1;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
         minDuration = 1.8;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.6;
+        minDuration = 1.7;
     }
     else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.4;
+        minDuration = 1.6;
     }
     else {
-        minDuration = 1.2;
+        minDuration = 1.6;
     }
     
-    int maxDuration = minDuration + 2.0;
+    int maxDuration = minDuration + 2.3;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     

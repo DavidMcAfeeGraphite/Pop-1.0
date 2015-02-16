@@ -89,7 +89,7 @@
 -(void)spawnBubble{
     SKSpriteNode *bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
     
-    int bubbleSize = arc4random() %30 + 70;
+    int bubbleSize = arc4random() %15 + 80;
     bubble.size = CGSizeMake(bubbleSize, bubbleSize);
     
     int midPt = self.frame.size.width+bubble.size.width;
@@ -128,36 +128,36 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 2.20;
+        minDuration = 2.50;
     }
     else if (numBubbles <= 30 || numBubbles >= 11) {
-        minDuration = 2.05;
+        minDuration = 2.35;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 1.85;
+        minDuration = 2.05;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 1.70;
+        minDuration = 1.80;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 1.50;
+        minDuration = 1.65;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
-        minDuration = 1.45;
+        minDuration = 1.60;
     }
     else if (numBubbles <= 80 || numBubbles >= 71) {
-        minDuration = 1.45;
+        minDuration = 1.55;
     }
     else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.45;
+        minDuration = 1.50;
     } else if (numBubbles <= 130 || numBubbles >= 91) {
-        minDuration = 1.45;
+        minDuration = 1.49;
     }
     else {
-        minDuration = 1.42;
+        minDuration = 1.65;
     }
     
-    int maxDuration = minDuration + 2.1;
+    int maxDuration = minDuration + 2.3;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
@@ -222,7 +222,7 @@
         
         [touchedNode removeFromParent];
         
-        SKAction *wait = [SKAction waitForDuration:0.5];
+        SKAction *wait = [SKAction waitForDuration:0.2];
         SKAction *remove = [SKAction removeFromParent];
         [explosion runAction:[SKAction sequence:@[wait, remove]]];
         
