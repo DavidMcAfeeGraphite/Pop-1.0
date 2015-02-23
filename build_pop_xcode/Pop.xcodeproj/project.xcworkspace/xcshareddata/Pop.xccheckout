@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>847B0BE4-8275-4773-A612-EBA53CC831D5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4932FE36EAAF5BD4D8235F2AA040DD29BE92EA69</key>
+		<string>https://github.com/DavidMcAfeeGraphite/Pop-1.0.git</string>
+		<key>5B866AC491D0221FF8F63AAA7871ED31811420CF</key>
+		<string>https://github.com/DavidMcAfeeGraphite/Pop.git</string>
+		<key>74E2BEF237CDFB9D3B67F4A7CB2F912CBFA2FA9A</key>
+		<string>https://github.com/GRAPHITE-GITHUB/Tappy-Balls-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>build_pop_xcode/Pop.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4932FE36EAAF5BD4D8235F2AA040DD29BE92EA69</key>
+		<string>../../..</string>
+		<key>5B866AC491D0221FF8F63AAA7871ED31811420CF</key>
+		<string>../../..Pop/</string>
+		<key>74E2BEF237CDFB9D3B67F4A7CB2F912CBFA2FA9A</key>
+		<string>../../../../../Documents/XCode%20Projects/Tappy%20Balls%20</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DavidMcAfeeGraphite/Pop-1.0.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4932FE36EAAF5BD4D8235F2AA040DD29BE92EA69</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4932FE36EAAF5BD4D8235F2AA040DD29BE92EA69</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pop</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5B866AC491D0221FF8F63AAA7871ED31811420CF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pop</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>74E2BEF237CDFB9D3B67F4A7CB2F912CBFA2FA9A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Tappy%20Balls%20</string>
+		</dict>
+	</array>
+</dict>
+</plist>

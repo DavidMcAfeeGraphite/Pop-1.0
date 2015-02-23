@@ -34,18 +34,90 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 0.36) {
+    
+    if (numBubbles <= 60) {
+    if (self.lastSpawnTimeInterval > 0.42) {
         self.lastSpawnTimeInterval = 0;
-        [self spawnBubble];
+        if (isAlertViewActive == NO) {
+            [self spawnBubble]; }}
+    }
+    
+    else if (numBubbles <= 100 || numBubbles >= 61) {
+        if (self.lastSpawnTimeInterval > 0.24) {
+        self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];}
+        }}
+    else if (numBubbles <= 150 || numBubbles >= 101) {
+        if (self.lastSpawnTimeInterval > 0.29) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+            [self spawnBubble];}
+        }}
+    else if (numBubbles <= 200 || numBubbles >= 151) {
+        if (self.lastSpawnTimeInterval > 0.20) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+            [self spawnBubble];}
+        }}
+    else if (numBubbles <= 300 || numBubbles >= 201) {
+        if (self.lastSpawnTimeInterval > 0.27) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+            [self spawnBubble];
+            [self spawnBubble];}
+        }}
+    else if (numBubbles <= 398 || numBubbles >= 301) {
+        if (self.lastSpawnTimeInterval > 0.27) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+                [self spawnBubble];
+                [self spawnBubble];
+                [self spawnBubble];}
+        }}
+        
+        else {
+            
+            if (self.lastSpawnTimeInterval > 0.23) {
+                self.lastSpawnTimeInterval = 0;
+                if (isAlertViewActive == NO) {
+                    [self spawnBubble];
+                 [self spawnBubble];
+                [self spawnBubble];
+                [self spawnBubble];}
+            
+        }
+        
+        }
+        
+        
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        isAlertViewActive = NO;
     }
 }
 
+//LINEQ_TEST_VIEW.PNG
+
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"background_game.png"];
+        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"Gameback.png"];
         backPic.size = CGSizeMake(self.size.width, self.size.height);
         backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:backPic];
+        
+        UISwipeGestureRecognizer *longHold = [[UILongPressGestureRecognizer alloc]
+                                              initWithTarget:self
+                                              action:@selector(longPress)];
+        
+        [self.view addGestureRecognizer:longHold];
         
         lives = 3;
         
@@ -181,8 +253,58 @@
         
         if (lives == 1) {
             
-            bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleGreen.png"];
-            bubble.name = @"lifeBubbleNode";
+            NSInteger randomNumber = arc4random() % 10;
+            
+            switch (randomNumber)
+            {
+                case 0:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                case 1:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                case 2:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                case 3:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                case 4:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                case 5:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                    
+                case 6:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                    
+                case 7:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"BubbleNode";
+                    break;
+                    
+                case 8:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+                    bubble.name = @"lifeBubbleNode";
+                    break;
+                    
+                case 9:
+                    bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleBlue.png"];
+                    bubble.name = @"lifeBubbleNode";
+                    break;
+                    
+            }
+            
+
             
         } else {
             
@@ -214,8 +336,22 @@
     }
     
     
-    int bubbleSize = arc4random() %15 + 80;
-    bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+    NSString *deviceType = [UIDevice currentDevice].model;
+    if([deviceType hasPrefix:@"iPad"])
+    {
+        NSLog(@"iPad");
+        
+        int bubbleSize = arc4random() %25 + 127;
+        bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+        
+        
+    }
+    else {
+        
+        int bubbleSize = arc4random() %15 + 80;
+        bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+    }
+
     
     int midPt = self.frame.size.width-bubble.size.width;
     int midPtVert = -self.frame.size.height-bubble.size.height/2;
@@ -229,22 +365,22 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 5.0;
+        minDuration = 5.5;
     }
     else if (numBubbles <= 20 || numBubbles >= 11) {
-        minDuration = 4.2;
+        minDuration = 4.5;
     }
     else if (numBubbles <= 30 || numBubbles >= 21) {
-        minDuration = 3.7;
+        minDuration = 4.0;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 2.8;
+        minDuration = 3.8;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 2.6;
+        minDuration = 2.9;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 1.7;
+        minDuration = 1.9;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
         minDuration = 1.4;
@@ -256,10 +392,10 @@
         minDuration = 1.1;
     }
     else {
-        minDuration = 1.00;
+        minDuration = 0.99;
     }
     
-    int maxDuration = minDuration + 2.0;
+    int maxDuration = minDuration + 1.2;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     

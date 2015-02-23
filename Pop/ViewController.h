@@ -21,12 +21,15 @@
     BOOL bannerIsVisible;
     IBOutlet UILabel *stateLabel;
     IBOutlet UIImageView *load;
-    
+    IBOutlet UIButton *button;
     IBOutlet UIButton *nc;
     IBOutlet UIButton *game;
     
     IBOutlet UIButton *classicTutorial;
     IBOutlet UIButton *classicButton;
+    
+    IBOutlet UIButton *ncButton;
+    IBOutlet UIButton *gameCentre;
     
     IBOutlet UIButton *arcadeTutorial;
     IBOutlet UIButton *arcadeButton;

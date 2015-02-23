@@ -40,31 +40,59 @@
             {
                 NSLog(@"iPad");
         
-                //adView.frame = CGRectOffset(adView.frame, 50, 380);
+                adView.frame = CGRectOffset(adView.frame, 50, 350);
                 
             } else {
-        adView.frame = CGRectOffset(adView.frame, 0, -50);
+                ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
+                [self.view addSubview:adView];
                 NSLog(@"iPhone");
         
             }
         
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            NSLog(@"iPad");
+            SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"Pop_iPad.png"];
+            backPic.size = CGSizeMake(self.size.width, self.size.height);
+            backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+            [self addChild:backPic];
+
+            
+            
+            
+            
+        } else {
         
         SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"background_with_icons.png"];
-        backPic.size = CGSizeMake(self.size.width, self.size.height);
-        backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
-        [self addChild:backPic];
+            backPic.size = CGSizeMake(self.size.width, self.size.height);
+            backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+            [self addChild:backPic];
+
+        }
         
         
         SKSpriteNode *title = [SKSpriteNode spriteNodeWithImageNamed:@"trans.png"];
-  title.size = CGSizeMake(280, 150);        title.position = CGPointMake(self.size.width/2, self.size.height-100);
+  title.size = CGSizeMake(280, 150);        title.position = CGPointMake(self.size.width/2, self.size.height-75);
         title.name = @"title";
         [self addChild:title];
         
          adView.hidden = YES;
         
         SKSpriteNode *classicMode = [SKSpriteNode spriteNodeWithImageNamed:@"button_classic.png"];
-        classicMode.size = CGSizeMake(170, 100);
-        classicMode.position = CGPointMake(self.size.width/2, self.size.height/2+65);
+        
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            NSLog(@"iPad");
+            
+            classicMode.size = CGSizeMake(240, 80);
+            classicMode.position = CGPointMake(self.size.width/2, self.size.height/2+60);
+            
+        } else {
+        classicMode.size = CGSizeMake(180, 60);
+            classicMode.position = CGPointMake(self.size.width/2, self.size.height/2+40);
+        }
+        
         classicMode.name = @"classicMode";
         [self addChild:classicMode];
         
@@ -79,8 +107,19 @@
 //        [self addChild:classicTitle];
         
         SKSpriteNode *arcadeMode = [SKSpriteNode spriteNodeWithImageNamed:@"button_arcade.png"];
-        arcadeMode.size = CGSizeMake(160, 100);
-        arcadeMode.position = CGPointMake(self.size.width/2, self.size.height/2-50);
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            NSLog(@"iPad");
+            
+            arcadeMode.size = CGSizeMake(240, 80);
+            arcadeMode.position = CGPointMake(self.size.width/2, self.size.height/2-60);
+        } else {
+        
+        arcadeMode.size = CGSizeMake(180, 60);
+        arcadeMode.position = CGPointMake(self.size.width/2, self.size.height/2-40);
+            
+        }
         arcadeMode.name = @"arcadeMode";
         [self addChild:arcadeMode];
         
@@ -95,8 +134,23 @@
 //        [self addChild:arcadeTitle];
         
         SKSpriteNode *frenzyMode = [SKSpriteNode spriteNodeWithImageNamed:@"button_frenzy.png"];
-        frenzyMode.size = CGSizeMake(160, 100);
-        frenzyMode.position = CGPointMake(self.size.width/2, self.size.height/2-165);
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            NSLog(@"iPad");
+            frenzyMode.size = CGSizeMake(240, 80);
+            
+            frenzyMode.position = CGPointMake(self.size.width/2, self.size.height/2-180);
+            
+            
+        }else {
+        
+        frenzyMode.size = CGSizeMake(180, 60);
+    
+        frenzyMode.position = CGPointMake(self.size.width/2, self.size.height/2-120);
+            
+        }
+        
         frenzyMode.name = @"frenzyMode";
         [self addChild:frenzyMode];
         
@@ -136,7 +190,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch * touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
-    
+    NSString *deviceType = [UIDevice currentDevice].model;
     
     
     SKSpriteNode *touchedNode = (SKSpriteNode *)[self nodeAtPoint:location];
@@ -212,16 +266,42 @@
             [explosion runAction:[SKAction sequence:@[wait, remove]]];
             
             //[load setHidden: YES];
-            SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_classic.png"];
+            
+            if([deviceType hasPrefix:@"iPad"]){
+                
+            SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"pop_classic_ipad.png"];
             backPic.size = CGSizeMake(self.size.width, self.size.height);
             backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
             [self addChild:backPic];
+                
+            }else {
+                
+                SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_classic.png"];
+                backPic.size = CGSizeMake(self.size.width, self.size.height);
+                backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+                [self addChild:backPic];
+                
+                
+            }
             
-            SKSpriteNode *classicStart = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_classic.png"];
+            if([deviceType hasPrefix:@"iPad"]){
+            
+            SKSpriteNode *classicStart = [SKSpriteNode spriteNodeWithImageNamed:@"pop_classic_ipad.png"];
             classicStart.size = CGSizeMake(self.size.width, self.size.height);
             classicStart.position = CGPointMake(self.size.width/2, self.size.height/2);
             classicStart.name = @"classicStart";
-            [self addChild:classicStart];
+                [self addChild:classicStart];}
+            
+            else {
+                
+                SKSpriteNode *classicStart = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_classic.png"];
+                classicStart.size = CGSizeMake(self.size.width, self.size.height);
+                classicStart.position = CGPointMake(self.size.width/2, self.size.height/2);
+                classicStart.name = @"classicStart";
+                [self addChild:classicStart];
+                
+                
+            }
             
             
             [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"RanBeforec2"];
@@ -454,16 +534,38 @@
 //            [load stopAnimating];
             
 //            [load setHidden: YES];
-            SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_arcade.png"];
-            backPic.size = CGSizeMake(self.size.width, self.size.height);
-            backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
-            [self addChild:backPic];
             
-            SKSpriteNode *arcadeStart = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_arcade.png"];
-            arcadeStart.size = CGSizeMake(self.size.width, self.size.height);
-            arcadeStart.position = CGPointMake(self.size.width/2, self.size.height/2);
-            arcadeStart.name = @"arcadeStart";
-            [self addChild:arcadeStart];
+            if([deviceType hasPrefix:@"iPad"]){
+                SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"pop_arcade_tutorial.png"];
+                backPic.size = CGSizeMake(self.size.width, self.size.height);
+                backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+                [self addChild:backPic];
+            }else {
+                SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_arcade.png"];
+                backPic.size = CGSizeMake(self.size.width, self.size.height);
+                backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+                [self addChild:backPic];
+                
+                
+            }
+          
+            if([deviceType hasPrefix:@"iPad"]){
+                SKSpriteNode *arcadeStart = [SKSpriteNode spriteNodeWithImageNamed:@"pop_arcade_tutorial.png"];
+                arcadeStart.size = CGSizeMake(self.size.width, self.size.height);
+                arcadeStart.position = CGPointMake(self.size.width/2, self.size.height/2);
+                arcadeStart.name = @"arcadeStart";
+                [self addChild:arcadeStart];
+                
+            }else {
+                SKSpriteNode *arcadeStart = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_arcade.png"];
+                arcadeStart.size = CGSizeMake(self.size.width, self.size.height);
+                arcadeStart.position = CGPointMake(self.size.width/2, self.size.height/2);
+                arcadeStart.name = @"arcadeStart";
+                [self addChild:arcadeStart];
+                
+                
+            }
+            
             
             
             [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"RanBeforea2"];
@@ -554,17 +656,48 @@
 //            [load stopAnimating];
 //            
 //            [load setHidden: YES];
-            SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_frenzy.png"];
-            backPic.size = CGSizeMake(self.size.width, self.size.height);
-            backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
-            [self addChild:backPic];
             
-            SKSpriteNode *frenzyStart = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_frenzy.png"];
+            
+
+        
+                
+                if([deviceType hasPrefix:@"iPad"]){
+                    SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"ipad_frenzy.png"];
+                
+                    backPic.size = CGSizeMake(self.size.width, self.size.height);
+                    backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+                
+                 [self addChild:backPic];
+                
+                }
+                    else {
+                        
+                        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_frenzy-2.png"];
+                        backPic.size = CGSizeMake(self.size.width, self.size.height);
+                        backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
+                        
+                        [self addChild:backPic];
+
+                    }
+            
+            
+            
+                    
+                if([deviceType hasPrefix:@"iPad"]){
+                    
+                    SKSpriteNode *frenzyStart = [SKSpriteNode spriteNodeWithImageNamed:@"ipad_frenzy.png"];
+                    frenzyStart.size = CGSizeMake(self.size.width, self.size.height);
+                    frenzyStart.position = CGPointMake(self.size.width/2, self.size.height/2);
+                    frenzyStart.name = @"frenzyStart";
+                    [self addChild:frenzyStart];
+                    
+                }else {
+            SKSpriteNode *frenzyStart = [SKSpriteNode spriteNodeWithImageNamed:@"tutorial_frenzy-2.png"];
             frenzyStart.size = CGSizeMake(self.size.width, self.size.height);
             frenzyStart.position = CGPointMake(self.size.width/2, self.size.height/2);
             frenzyStart.name = @"frenzyStart";
             [self addChild:frenzyStart];
-            
+                }
             
             [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"RanBeforef2"];
             [[NSUserDefaults standardUserDefaults] synchronize];

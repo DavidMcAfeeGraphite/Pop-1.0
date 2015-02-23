@@ -17,6 +17,7 @@
     NSInteger lives;
     int numBubbles;
     NSTimer *timer;
+    BOOL isAlertViewActive;
 
 }
 

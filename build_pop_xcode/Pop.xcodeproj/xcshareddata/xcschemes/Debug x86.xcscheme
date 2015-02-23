@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0430"
-   version = "1.3">
+   version = "1.8">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "69000000000000000000000A"
-               BuildableName = "Debug x86.s86"
+               BuildableName = "Pop.dylib"
                BlueprintName = "Pop"
                ReferencedContainer = "container:Pop.xcodeproj">
             </BuildableReference>
@@ -37,10 +37,22 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
       <PathRunnable
          FilePath = "/Applications/Marmalade.app/Contents/s3e/loader/osx/s3e_simulator_debug">
       </PathRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "69000000000000000000000A"
+            BuildableName = "Pop.dylib"
+            BlueprintName = "Pop"
+            ReferencedContainer = "container:Pop.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-via:&apos;/Users/David/Downloads/Pop/build_pop_xcode/build/Debug.via&apos;"
@@ -56,7 +68,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug"
+      debugDocumentVersioning = "YES">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

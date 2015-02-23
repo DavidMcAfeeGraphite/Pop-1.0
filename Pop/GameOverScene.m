@@ -18,8 +18,12 @@
 @synthesize theScore;
 
 -(id)initWithSize:(CGSize)size won:(BOOL)won {
+    
+   
+    
+    
     if (self = [super initWithSize:size]) {
-        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"background_with_art.png"];
+        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"Gameover.png"];
         backPic.size = CGSizeMake(self.size.width, self.size.height);
         backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:backPic];
@@ -37,8 +41,14 @@
 //        label.fontColor = [SKColor darkGrayColor];
 //        label.position = CGPointMake(self.size.width/2, self.size.height/2+150);
 //        [self addChild:label];
+        NSString *deviceType = [UIDevice currentDevice].model;
         
         
+        UISwipeGestureRecognizer *longHold = [[UILongPressGestureRecognizer alloc]
+                                              initWithTarget:self
+                                              action:@selector(longPress)];
+        
+        [self.view addGestureRecognizer:longHold];
         
         SKSpriteNode *home = [SKSpriteNode spriteNodeWithImageNamed:@"trans.png"];
         home.size = CGSizeMake(50, 50);
@@ -48,13 +58,20 @@
         
         SKSpriteNode *facebook = [SKSpriteNode spriteNodeWithImageNamed:@"button_facebook-2.png"];
         facebook.size = CGSizeMake(55, 55);
-        facebook.position = CGPointMake(self.size.width/2 - 99, self.size.height/2 -115);
+        if([deviceType hasPrefix:@"iPad"])
+        { facebook.position = CGPointMake(self.size.width/2 - 149, self.size.height/2 -315);
+        }else {
+            facebook.position = CGPointMake(self.size.width/2 - 99, self.size.height/2 -115); }
         facebook.name = @"facebook";
         [self addChild:facebook];
         
         SKSpriteNode *twitter = [SKSpriteNode spriteNodeWithImageNamed:@"button_twitter-2.png"];
         twitter.size = CGSizeMake(55, 55);
-        twitter.position = CGPointMake(self.size.width/2 + 99, self.size.height/2 -115);
+        if([deviceType hasPrefix:@"iPad"])
+        { twitter.position = CGPointMake(self.size.width/2 + 149, self.size.height/2 -315);
+            
+        } else {
+            twitter.position = CGPointMake(self.size.width/2 + 99, self.size.height/2 -115); }
         twitter.name = @"twitter";
         [self addChild:twitter];
         
@@ -64,7 +81,14 @@
         homeText.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         homeText.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         homeText.fontColor = [SKColor lightTextColor];
-        homeText.position = CGPointMake(self.size.width/2 -55, self.size.height/2 - 175);
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            homeText.position = CGPointMake(self.size.width/2 -55, self.size.height/2 - 375);
+            
+        } else {
+            homeText.position = CGPointMake(self.size.width/2 -55, self.size.height/2 - 165);
+        }
         homeText.name = @"homeText";
         [self addChild:homeText];
         
@@ -74,23 +98,59 @@
         tutorialText.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         tutorialText.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         tutorialText.fontColor = [SKColor lightTextColor];
-        tutorialText.position = CGPointMake(self.size.width/2 + 45, self.size.height/2 - 175);
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            tutorialText.position = CGPointMake(self.size.width/2 + 45, self.size.height/2 - 375);
+        }else {
+            tutorialText.position = CGPointMake(self.size.width/2 + 45, self.size.height/2 - 165);
+            
+        }
+        
         tutorialText.name = @"tutorialText";
         [self addChild:tutorialText];
         
-        SKSpriteNode *restart = [SKSpriteNode spriteNodeWithImageNamed:@"bubbleBlue.png"];
-        restart.size = CGSizeMake(175, 175);
-        restart.position = CGPointMake(self.size.width/2, self.size.height/2 -40);
+        SKSpriteNode *restart = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
+        
+        
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            restart.size = CGSizeMake(350, 350);
+            restart.position = CGPointMake(self.size.width/2, self.size.height/2 -140);
+            
+            
+        }
+        
+        else {
+            
+            restart.size = CGSizeMake(175, 175);
+            restart.position = CGPointMake(self.size.width/2, self.size.height/2 -40);
+            
+            
+        }
+        
         restart.name = @"restart";
         [self addChild:restart];
         
-        SKAction *rotation = [SKAction rotateByAngle: -M_PI*1200000 duration:600000.0];
+        SKAction *rotation = [SKAction rotateByAngle: -M_PI*120000000 duration:60000000.0];
         
         [restart runAction: rotation];
         
         SKSpriteNode *restar = [SKSpriteNode spriteNodeWithImageNamed:@"label_tryagain (1).png"];
-        restar.size = CGSizeMake(230, 70);
-        restar.position = CGPointMake(self.size.width/2, self.size.height/2 -40);
+        
+        if([deviceType hasPrefix:@"iPad"])
+        {
+            restar.size = CGSizeMake(350, 107);
+            restar.position = CGPointMake(self.size.width/2, self.size.height/2 -140);
+            
+        }
+        
+        else {
+            restar.size = CGSizeMake(230, 70);
+            restar.position = CGPointMake(self.size.width/2, self.size.height/2 -40);
+            
+        }
         restar.name = @"restar";
         [self addChild:restar];
         
@@ -117,26 +177,30 @@
         highScoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         highScoreLabel.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         highScoreLabel.fontColor = [SKColor lightTextColor];
-        NSString *deviceType = [UIDevice currentDevice].model;
+        
+        
         if([deviceType hasPrefix:@"iPad"])
         {
-            highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +200);
+            highScoreLabel.position = CGPointMake(self.size.width/2 +150, self.size.height/2 +400);
             NSLog(@"iPad");
+            highScoreLabel.fontSize = 55;
             
-        } 
-        
+        }
         else if([deviceType hasPrefix:@"iPhone4"])
         {
             highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +200);
             NSLog(@"iPhone 4s");
+            highScoreLabel.fontSize = 30;
             
-        } 
+        }
+        
         
         else {
             highScoreLabel.position = CGPointMake(self.size.width/2 +70, self.size.height/2 +240);
-            NSLog(@"iPhone");
+            NSLog(@"iPhone 5 or higher");
+            highScoreLabel.fontSize = 30;
         }
-
+        
     
         highScoreLabel.name = @"highScoreLabel";
         [self addChild:highScoreLabel];
@@ -148,21 +212,23 @@
         lastScoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         lastScoreLabel.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         lastScoreLabel.fontColor = [SKColor lightTextColor];
+       
         if([deviceType hasPrefix:@"iPad"])
         {
-            lastScoreLabel.position = CGPointMake(self.size.width/2 -110, self.size.height/2 +200);
+            lastScoreLabel.position = CGPointMake(self.size.width/2 -250, self.size.height/2 +400);
+            lastScoreLabel.fontSize = 90;
         }
-    
-    else if([deviceType hasPrefix:@"iPhone4"])
+        
+        else if([deviceType hasPrefix:@"iPhone4"])
         {
             lastScoreLabel.position = CGPointMake(self.size.width/2 -110, self.size.height/2 +200);
         }
-    
+        
+        
         else {
             lastScoreLabel.position = CGPointMake(self.size.width/2 -110, self.size.height/2 +240);
             NSLog(@"iPhone 5 or higher");
         }
-
         lastScoreLabel.name = @"lastScoreLabel";
         [self addChild:lastScoreLabel];
         
@@ -208,38 +274,41 @@
     } else if ([[touchedNode name] isEqualToString:@"tutorialText"]||[[touchedNode name] isEqualToString:@"tutorialText"]) {
         
         
-        UIImageView *load = [[UIImageView alloc] initWithImage:nil];
-        load.image = [UIImage imageNamed:@"tutorial_classic.png"];
         
         NSString *deviceType = [UIDevice currentDevice].model;
-        if([deviceType hasPrefix:@"iPad"]){
-            
-            load.frame = CGRectMake(0,0, 320, 480);
-            }
-        else if ([deviceType hasPrefix:@"iPhone4"]) {
-            
-            load.frame = CGRectMake(0,0,320,480);
-            }
+       
+            UIImageView *load = [[UIImageView alloc] initWithImage:nil];
         
-        else {load.frame = CGRectMake(0,0, 320, 570);
-        }
+         if([deviceType hasPrefix:@"iPad"]){
+            load.image = [UIImage imageNamed:@"pop_classic_ipad.png"];
+            
+            load.frame = CGRectMake(0,0, 768, 1024); }
+        
+        else  if ([deviceType hasPrefix:@"iPhone"]) {
+            
+                load.image = [UIImage imageNamed:@"tutorial_classic-2.png"];
+                
+            load.frame = CGRectMake(0,0, 320, 480); }
+        
+                [self.view addSubview:load];
+                
+                load.alpha = 1;
+                
+                
+                //UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewHide:)];
+                
+                //[self.view addGestureRecognizer:tapRecognizer];
+                
+                [UIView animateWithDuration:0.9 delay:3.5 options:0 animations:^{
+                    
+                    load.alpha = 0.0;
+                } completion:^(BOOL finished) {
+                    load.hidden = YES;
+                }];
+                
     
-    [self.view addSubview:load];
-        
-        load.alpha = 1;
-        
-        
-        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewHide:)];
-        
-        //[UIView animateWithDuration:0.9 delay:1.5 options:0 animations:^{
-            
-          //  load.alpha = 0.0;
-        //} completion:^(BOOL finished) {
-          //  load.hidden = YES;
-        //}];
 
-        
-        
+    
         
     } else if ([[touchedNode name] isEqualToString:@"twitter"]||[[touchedNode name] isEqualToString:@"twitter"]) {
         
@@ -421,12 +490,6 @@
 }
 
 
--(void)viewHide:(UITapGestureRecognizer*)sender {
-    
-      load.alpha=0;
-      NSLog(@"View gone");
-      load.hidden =YES;
-      
-    }
+
 
 @end

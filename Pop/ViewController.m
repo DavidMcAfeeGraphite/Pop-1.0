@@ -72,7 +72,7 @@
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval: 0.7
+    timer = [NSTimer scheduledTimerWithTimeInterval: 0.6
                                                 target: self
                                               selector: @selector(showActivity)
                                               userInfo: nil
@@ -164,6 +164,22 @@
 }
 
 
+-(IBAction)exit {
+     SKView * skView = (SKView *)self.view;
+    SKScene * scene = [HomeScene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    
+    [skView presentScene:scene];
+    
+    NSString *scene2 =@"home";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:scene2 forKey:@"scene"];
+    [defaults synchronize];
+
+}
+
+
 - (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 { [self dismissModalViewControllerAnimated:YES];
 }
@@ -183,12 +199,22 @@
         self.adView.alpha = 1.0;
         [adView setHidden:NO];
         NSLog(@"game");
+        ncButton.enabled = NO;
+        gameCentre.enabled = NO;
+        
+        [button setHidden:NO];
+        button.enabled = YES;
+        
         
         
     } else {
         [adView setHidden:YES];
         self.adView.alpha = 0.0;
         NSLog(@"menu");
+        ncButton.enabled = YES;
+        gameCentre.enabled = YES;
+        [button setHidden:YES];
+        button.enabled = NO;
         
     }
     
@@ -260,11 +286,16 @@
 }
 
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     adView.alpha = 0;
     [load setHidden:YES];
     [aboutView setHidden:YES];
+    
+    
     
    self.adView.delegate = self;
     

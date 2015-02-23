@@ -51,9 +51,15 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         
+        UISwipeGestureRecognizer *longHold = [[UILongPressGestureRecognizer alloc]
+                                              initWithTarget:self
+                                              action:@selector(longPress)];
+        
+        [self.view addGestureRecognizer:longHold];
+        
         isAlertViewActive = NO;
         
-        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"background_game.png"];
+        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"Gameback.png"];
         backPic.size = CGSizeMake(self.size.width, self.size.height);
         backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:backPic];
@@ -72,7 +78,7 @@
         highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Mikado"];
         
         NSInteger highScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"frenzyHighScore"];
-        highScoreLabel.text = [NSString stringWithFormat:@"Best %ld", (long)highScore];
+        highScoreLabel.text = [NSString stringWithFormat:@"BEST %ld", (long)highScore];
         highScoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
         highScoreLabel.fontSize = 30;
         highScoreLabel.position = CGPointMake(20, self.size.height-50);
@@ -80,6 +86,21 @@
         highScoreLabel.alpha = 0.7;
         
         [self addChild:highScoreLabel];
+        
+        modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Mikado"];
+        
+        
+        modeLabel.text = @"FRENZY";
+        modeLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+        modeLabel.fontSize = 30;
+        modeLabel.position = CGPointMake(180, self.size.height-50);
+        modeLabel.color = [SKColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+        modeLabel.alpha = 0.7;
+        
+        [self addChild:modeLabel];
+
+        
+        
         
         _updatedHighScore = NO;
     }
@@ -89,8 +110,22 @@
 -(void)spawnBubble{
     SKSpriteNode *bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
     
-    int bubbleSize = arc4random() %15 + 80;
-    bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+    NSString *deviceType = [UIDevice currentDevice].model;
+    if([deviceType hasPrefix:@"iPad"])
+    {
+        NSLog(@"iPad");
+        
+        int bubbleSize = arc4random() %25 + 107;
+        bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+        
+        
+    }
+    else {
+        
+        int bubbleSize = arc4random() %15 + 80;
+        bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+    }
+
     
     int midPt = self.frame.size.width+bubble.size.width;
     int xPt = arc4random() %midPt - bubble.size.width/2;
@@ -128,19 +163,19 @@
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 2.50;
+        minDuration = 3.80;
     }
     else if (numBubbles <= 30 || numBubbles >= 11) {
-        minDuration = 2.35;
+        minDuration = 3.15;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 2.05;
+        minDuration = 2.75;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 1.80;
+        minDuration = 2.20;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
-        minDuration = 1.5;
+        minDuration = 1.6;
     }
     else if (numBubbles <= 70 || numBubbles >= 61) {
         minDuration = 1.35;
@@ -232,7 +267,7 @@
             [[NSUserDefaults standardUserDefaults] setInteger:newHighScore forKey:@"frenzyHighScore"];
             _updatedHighScore = YES;
             
-            highScoreLabel.text = [NSString stringWithFormat:@"Best %ld", (long)newHighScore];
+            highScoreLabel.text = [NSString stringWithFormat:@"BEST %ld", (long)newHighScore];
             [highScoreLabel runAction:pulse];
         }
     }

@@ -8,34 +8,38 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.GRAPHITE.pop</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>pop_icon_87-2.png</string>
 		<string>pop_icon_120-2.png</string>
+		<string>Resized-HMRK4.png</string>
+		<string>Resized-3KGUX.png</string>
 		<string>pop_icon_180-2.png</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.GRAPHITE.pop</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>16.2</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>mikado_bold (1).ttf</string>
 	</array>
-	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>2</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

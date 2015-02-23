@@ -11,6 +11,7 @@
 @interface frenzyScene : SKScene <UIAlertViewDelegate>{
     IBOutlet SKLabelNode *myLabel;
     IBOutlet SKLabelNode *highScoreLabel;
+     IBOutlet SKLabelNode *modeLabel;
     BOOL isAlertViewActive;
     int numBubbles;
 }

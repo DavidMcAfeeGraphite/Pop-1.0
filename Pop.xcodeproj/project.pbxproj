@@ -23,12 +23,13 @@
 		5517E28619878393007594A8 /* PopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5517E28519878393007594A8 /* PopTests.m */; };
 		6308B4271A5FADD300EAAF40 /* label_tryagain (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 6308B4261A5FADD300EAAF40 /* label_tryagain (1).png */; };
 		6308B4291A5FB20D00EAAF40 /* Pop loading screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6308B4281A5FB20D00EAAF40 /* Pop loading screen.png */; };
-		6308B42B1A5FBEA900EAAF40 /* bubbleDavid.png in Resources */ = {isa = PBXBuildFile; fileRef = 6308B42A1A5FBEA900EAAF40 /* bubbleDavid.png */; };
 		6308B42D1A5FCAB400EAAF40 /* calc.png in Resources */ = {isa = PBXBuildFile; fileRef = 6308B42C1A5FCAB400EAAF40 /* calc.png */; };
 		6308B42E1A60ED4400EAAF40 /* mikado_bold (1).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 637841511A5FA1DC00174D71 /* mikado_bold (1).ttf */; };
 		6308B4321A61094300EAAF40 /* Monkeys Spinning Monkeys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EEE3B24619CC5E3D0094566A /* Monkeys Spinning Monkeys.mp3 */; };
 		6309732D1A5C0DAF001D32A2 /* popover (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 6309732C1A5C0DAF001D32A2 /* popover (1).png */; };
 		630973331A5C0F75001D32A2 /* CreditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 630973321A5C0F75001D32A2 /* CreditView.m */; };
+		6316F4EA1A933B77006C0545 /* iphone6-plus-box-space-gray-2014.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6316F4E91A933B77006C0545 /* iphone6-plus-box-space-gray-2014.jpeg */; };
+		6316F4EC1A933B99006C0545 /* 100 Pop Downloads.png in Resources */ = {isa = PBXBuildFile; fileRef = 6316F4EB1A933B99006C0545 /* 100 Pop Downloads.png */; };
 		631A60DB1A4D6D240002702E /* imageBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 631A60DA1A4D6D240002702E /* imageBanner.png */; };
 		631A60DD1A4D71180002702E /* 1load.png in Resources */ = {isa = PBXBuildFile; fileRef = 631A60DC1A4D71180002702E /* 1load.png */; };
 		631A60DF1A4D711F0002702E /* 2load.png in Resources */ = {isa = PBXBuildFile; fileRef = 631A60DE1A4D711F0002702E /* 2load.png */; };
@@ -36,13 +37,20 @@
 		631A60E31A4D712E0002702E /* 4load.png in Resources */ = {isa = PBXBuildFile; fileRef = 631A60E21A4D712E0002702E /* 4load.png */; };
 		631AA4D71A33335700527F16 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 631AA4D61A33335700527F16 /* GameCenterManager.m */; };
 		631DC9B31A46D4B3000F9FD5 /* Game-Center-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 631DC9B21A46D4B3000F9FD5 /* Game-Center-icon.png */; };
+		631EAA131A99739C00991593 /* Resized-HMRK4.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA121A99739C00991593 /* Resized-HMRK4.png */; };
+		631EAA151A9973A100991593 /* iTunesArtwork@2x-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA141A9973A100991593 /* iTunesArtwork@2x-2.png */; };
+		631EAA171A9974D700991593 /* Resized-3KGUX.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA161A9974D700991593 /* Resized-3KGUX.png */; };
+		631EAA191A99A53800991593 /* pop_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA181A99A53800991593 /* pop_splash.png */; };
+		631EAA1B1A99A56C00991593 /* Pop_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA1A1A99A56C00991593 /* Pop_iPad.png */; };
+		631EAA1D1A99C22E00991593 /* pop_classic_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA1C1A99C22E00991593 /* pop_classic_ipad.png */; };
+		631EAA1F1A99E67500991593 /* tutorial_arcade.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA1E1A99E67500991593 /* tutorial_arcade.png */; };
+		631EAA211A99E6BE00991593 /* pop_arcade_tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA201A99E6BE00991593 /* pop_arcade_tutorial.png */; };
+		631EAA231A99E9F300991593 /* tutorial_frenzy-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA221A99E9F300991593 /* tutorial_frenzy-2.png */; };
+		631EAA251A99EA1E00991593 /* ipad_frenzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 631EAA241A99EA1E00991593 /* ipad_frenzy.png */; };
+		632254E71A9B2C6700AFFE2B /* menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = 632254E61A9B2C6700AFFE2B /* menubar.png */; };
+		632254E91A9B2DFD00AFFE2B /* exitgame.png in Resources */ = {isa = PBXBuildFile; fileRef = 632254E81A9B2DFD00AFFE2B /* exitgame.png */; };
 		633B3DF81A8B04F5008A72BD /* UIButton+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 633B3DF71A8B04F5008A72BD /* UIButton+Extensions.m */; };
 		633C99B61A4A9CAD0017EA2A /* pop_icon_87.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99B51A4A9CAD0017EA2A /* pop_icon_87.png */; };
-		633C99BC1A4A9DFD0017EA2A /* background_with_icons.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99BB1A4A9DFD0017EA2A /* background_with_icons.png */; };
-		633C99BE1A4A9E070017EA2A /* button_arcade.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99BD1A4A9E060017EA2A /* button_arcade.png */; };
-		633C99C01A4A9E0C0017EA2A /* button_classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99BF1A4A9E0C0017EA2A /* button_classic.png */; };
-		633C99C21A4A9E130017EA2A /* button_frenzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C99C11A4A9E130017EA2A /* button_frenzy.png */; };
-		634A62361A666127008210DB /* pop_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 634A62351A666127008210DB /* pop_splash.png */; };
 		634A62381A6661E3008210DB /* button_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 634A62371A6661E3008210DB /* button_facebook.png */; };
 		634A623A1A666488008210DB /* button_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 634A62391A666488008210DB /* button_twitter.png */; };
 		634A623C1A6699F7008210DB /* button_facebook-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 634A623B1A6699F7008210DB /* button_facebook-2.png */; };
@@ -56,9 +64,23 @@
 		63819BDD1A4828A400711CA7 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63819BDC1A4828A400711CA7 /* TutorialViewController.m */; };
 		63819BE01A4828FB00711CA7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63819BDF1A4828FB00711CA7 /* PageContentViewController.m */; };
 		6384EF961A52A132004537C0 /* tutorial_frenzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6384EF951A52A132004537C0 /* tutorial_frenzy.png */; };
-		6384EF981A52B2AC004537C0 /* tutorial_arcade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6384EF971A52B2AB004537C0 /* tutorial_arcade.png */; };
 		6384EF9A1A52B552004537C0 /* tutorial_classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6384EF991A52B552004537C0 /* tutorial_classic.png */; };
 		6386A7971A62954400E02D44 /* POPstart.png in Resources */ = {isa = PBXBuildFile; fileRef = 6386A7961A62954400E02D44 /* POPstart.png */; };
+		63ED2B661A9713E8001293C8 /* pop_main_popover.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B651A9713E8001293C8 /* pop_main_popover.png */; };
+		63ED2B681A982A58001293C8 /* Gameback.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B671A982A58001293C8 /* Gameback.png */; };
+		63ED2B6A1A982ADB001293C8 /* background_art.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B691A982ADB001293C8 /* background_art.png */; };
+		63ED2B6C1A982AFF001293C8 /* Gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B6B1A982AFF001293C8 /* Gameover.png */; };
+		63ED2B6E1A982BC6001293C8 /* bubbleDavid.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B6D1A982BC6001293C8 /* bubbleDavid.png */; };
+		63ED2B701A982BFE001293C8 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B6F1A982BFE001293C8 /* bubble.png */; };
+		63ED2B721A982C04001293C8 /* bubbleBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B711A982C04001293C8 /* bubbleBlue.png */; };
+		63ED2B741A982C08001293C8 /* bubbleGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B731A982C08001293C8 /* bubbleGreen.png */; };
+		63ED2B761A982C0B001293C8 /* bubbleRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B751A982C0B001293C8 /* bubbleRed.png */; };
+		63ED2B781A987D19001293C8 /* tutorial_classic-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B771A987D19001293C8 /* tutorial_classic-2.png */; };
+		63ED2B7A1A987EFF001293C8 /* background_with_icons.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B791A987EFF001293C8 /* background_with_icons.png */; };
+		63ED2B7C1A988011001293C8 /* button_arcade.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B7B1A988011001293C8 /* button_arcade.png */; };
+		63ED2B7E1A988017001293C8 /* button_classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B7D1A988017001293C8 /* button_classic.png */; };
+		63ED2B801A98801C001293C8 /* button_frenzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B7F1A98801C001293C8 /* button_frenzy.png */; };
+		63ED2B821A988063001293C8 /* pop_main-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED2B811A988063001293C8 /* pop_main-3.png */; };
 		63F786DD1A7E2F8D0054A069 /* pop_icon_120-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F786DC1A7E2F8D0054A069 /* pop_icon_120-2.png */; };
 		63F786DF1A7E2FB20054A069 /* pop_icon_87-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F786DE1A7E2FB20054A069 /* pop_icon_87-2.png */; };
 		63F786E11A7E2FCD0054A069 /* pop_icon_180-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F786E01A7E2FCD0054A069 /* pop_icon_180-2.png */; };
@@ -73,12 +95,6 @@
 		EEE3B24E19CE19050094566A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B24D19CE19050094566A /* GameKit.framework */; };
 		EEE3B25419CE3B9D0094566A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B25319CE3B9D0094566A /* iAd.framework */; };
 		EEF483D819D26A2500B463CA /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483CE19D26A2500B463CA /* 1.png */; };
-		EEF483D919D26A2500B463CA /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483CF19D26A2500B463CA /* bubble.png */; };
-		EEF483DA19D26A2500B463CA /* bubbleBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D019D26A2500B463CA /* bubbleBlue.png */; };
-		EEF483DB19D26A2500B463CA /* bubbleGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D119D26A2500B463CA /* bubbleGreen.png */; };
-		EEF483DC19D26A2500B463CA /* bubbleRed.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D219D26A2500B463CA /* bubbleRed.png */; };
-		EEF483DD19D26A2500B463CA /* bubbleRY.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D319D26A2500B463CA /* bubbleRY.png */; };
-		EEF483DE19D26A2500B463CA /* bubbleYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D419D26A2500B463CA /* bubbleYellow.png */; };
 		EEF483DF19D26A2500B463CA /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D519D26A2500B463CA /* heart.png */; };
 		EEF483E019D26A2500B463CA /* heart3.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D619D26A2500B463CA /* heart3.png */; };
 		EEF483E119D26A2500B463CA /* heartBroken.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF483D719D26A2500B463CA /* heartBroken.png */; };
@@ -122,11 +138,12 @@
 		5517E28519878393007594A8 /* PopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopTests.m; sourceTree = "<group>"; };
 		6308B4261A5FADD300EAAF40 /* label_tryagain (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "label_tryagain (1).png"; sourceTree = "<group>"; };
 		6308B4281A5FB20D00EAAF40 /* Pop loading screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pop loading screen.png"; sourceTree = "<group>"; };
-		6308B42A1A5FBEA900EAAF40 /* bubbleDavid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleDavid.png; sourceTree = "<group>"; };
 		6308B42C1A5FCAB400EAAF40 /* calc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calc.png; sourceTree = "<group>"; };
 		6309732C1A5C0DAF001D32A2 /* popover (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover (1).png"; sourceTree = "<group>"; };
 		630973311A5C0F75001D32A2 /* CreditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditView.h; sourceTree = "<group>"; };
 		630973321A5C0F75001D32A2 /* CreditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditView.m; sourceTree = "<group>"; };
+		6316F4E91A933B77006C0545 /* iphone6-plus-box-space-gray-2014.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iphone6-plus-box-space-gray-2014.jpeg"; sourceTree = "<group>"; };
+		6316F4EB1A933B99006C0545 /* 100 Pop Downloads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "100 Pop Downloads.png"; sourceTree = "<group>"; };
 		631A60DA1A4D6D240002702E /* imageBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBanner.png; sourceTree = "<group>"; };
 		631A60DC1A4D71180002702E /* 1load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1load.png; sourceTree = "<group>"; };
 		631A60DE1A4D711F0002702E /* 2load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2load.png; sourceTree = "<group>"; };
@@ -136,14 +153,21 @@
 		631AA4D61A33335700527F16 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = "../../../Documents/XCode Projects/Tappy Balls /TappyPlanes/GameCenterManager.m"; sourceTree = "<group>"; };
 		631AA4D81A33338C00527F16 /* AppSpecificValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppSpecificValues.h; path = "../../../Documents/XCode Projects/Tappy Balls /TappyPlanes/AppSpecificValues.h"; sourceTree = "<group>"; };
 		631DC9B21A46D4B3000F9FD5 /* Game-Center-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game-Center-icon.png"; sourceTree = "<group>"; };
+		631EAA121A99739C00991593 /* Resized-HMRK4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resized-HMRK4.png"; sourceTree = "<group>"; };
+		631EAA141A9973A100991593 /* iTunesArtwork@2x-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x-2.png"; sourceTree = "<group>"; };
+		631EAA161A9974D700991593 /* Resized-3KGUX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resized-3KGUX.png"; sourceTree = "<group>"; };
+		631EAA181A99A53800991593 /* pop_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_splash.png; sourceTree = "<group>"; };
+		631EAA1A1A99A56C00991593 /* Pop_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pop_iPad.png; sourceTree = "<group>"; };
+		631EAA1C1A99C22E00991593 /* pop_classic_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_classic_ipad.png; sourceTree = "<group>"; };
+		631EAA1E1A99E67500991593 /* tutorial_arcade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_arcade.png; sourceTree = "<group>"; };
+		631EAA201A99E6BE00991593 /* pop_arcade_tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_arcade_tutorial.png; sourceTree = "<group>"; };
+		631EAA221A99E9F300991593 /* tutorial_frenzy-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial_frenzy-2.png"; sourceTree = "<group>"; };
+		631EAA241A99EA1E00991593 /* ipad_frenzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_frenzy.png; sourceTree = "<group>"; };
+		632254E61A9B2C6700AFFE2B /* menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar.png; sourceTree = "<group>"; };
+		632254E81A9B2DFD00AFFE2B /* exitgame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exitgame.png; sourceTree = "<group>"; };
 		633B3DF61A8B04F5008A72BD /* UIButton+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extensions.h"; sourceTree = "<group>"; };
 		633B3DF71A8B04F5008A72BD /* UIButton+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extensions.m"; sourceTree = "<group>"; };
 		633C99B51A4A9CAD0017EA2A /* pop_icon_87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_icon_87.png; sourceTree = "<group>"; };
-		633C99BB1A4A9DFD0017EA2A /* background_with_icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_with_icons.png; sourceTree = "<group>"; };
-		633C99BD1A4A9E060017EA2A /* button_arcade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_arcade.png; sourceTree = "<group>"; };
-		633C99BF1A4A9E0C0017EA2A /* button_classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_classic.png; sourceTree = "<group>"; };
-		633C99C11A4A9E130017EA2A /* button_frenzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_frenzy.png; sourceTree = "<group>"; };
-		634A62351A666127008210DB /* pop_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_splash.png; sourceTree = "<group>"; };
 		634A62371A6661E3008210DB /* button_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_facebook.png; sourceTree = "<group>"; };
 		634A62391A666488008210DB /* button_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_twitter.png; sourceTree = "<group>"; };
 		634A623B1A6699F7008210DB /* button_facebook-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_facebook-2.png"; sourceTree = "<group>"; };
@@ -161,10 +185,25 @@
 		63819BDF1A4828FB00711CA7 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		6384EF941A52A0E8004537C0 /* pop_tutorial_frenzy.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = pop_tutorial_frenzy.psd; sourceTree = "<group>"; };
 		6384EF951A52A132004537C0 /* tutorial_frenzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_frenzy.png; sourceTree = "<group>"; };
-		6384EF971A52B2AB004537C0 /* tutorial_arcade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_arcade.png; sourceTree = "<group>"; };
 		6384EF991A52B552004537C0 /* tutorial_classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_classic.png; sourceTree = "<group>"; };
 		6384EF9B1A52B7A6004537C0 /* mikado_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mikado_bold.ttf; sourceTree = "<group>"; };
 		6386A7961A62954400E02D44 /* POPstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = POPstart.png; sourceTree = "<group>"; };
+		63ED2B651A9713E8001293C8 /* pop_main_popover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop_main_popover.png; sourceTree = "<group>"; };
+		63ED2B671A982A58001293C8 /* Gameback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gameback.png; sourceTree = "<group>"; };
+		63ED2B691A982ADB001293C8 /* background_art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_art.png; sourceTree = "<group>"; };
+		63ED2B6B1A982AFF001293C8 /* Gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gameover.png; sourceTree = "<group>"; };
+		63ED2B6D1A982BC6001293C8 /* bubbleDavid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleDavid.png; sourceTree = "<group>"; };
+		63ED2B6F1A982BFE001293C8 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		63ED2B711A982C04001293C8 /* bubbleBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleBlue.png; sourceTree = "<group>"; };
+		63ED2B731A982C08001293C8 /* bubbleGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleGreen.png; sourceTree = "<group>"; };
+		63ED2B751A982C0B001293C8 /* bubbleRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleRed.png; sourceTree = "<group>"; };
+		63ED2B771A987D19001293C8 /* tutorial_classic-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial_classic-2.png"; sourceTree = "<group>"; };
+		63ED2B791A987EFF001293C8 /* background_with_icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_with_icons.png; sourceTree = "<group>"; };
+		63ED2B7B1A988011001293C8 /* button_arcade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_arcade.png; sourceTree = "<group>"; };
+		63ED2B7D1A988017001293C8 /* button_classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_classic.png; sourceTree = "<group>"; };
+		63ED2B7F1A98801C001293C8 /* button_frenzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_frenzy.png; sourceTree = "<group>"; };
+		63ED2B811A988063001293C8 /* pop_main-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_main-3.png"; sourceTree = "<group>"; };
+		63ED2B831A988069001293C8 /* pop.pbw */ = {isa = PBXFileReference; lastKnownFileType = file; path = pop.pbw; sourceTree = "<group>"; };
 		63F786DC1A7E2F8D0054A069 /* pop_icon_120-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_icon_120-2.png"; sourceTree = "<group>"; };
 		63F786DE1A7E2FB20054A069 /* pop_icon_87-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_icon_87-2.png"; sourceTree = "<group>"; };
 		63F786E01A7E2FCD0054A069 /* pop_icon_180-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_icon_180-2.png"; sourceTree = "<group>"; };
@@ -185,12 +224,6 @@
 		EEE3B24D19CE19050094566A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		EEE3B25319CE3B9D0094566A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EEF483CE19D26A2500B463CA /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		EEF483CF19D26A2500B463CA /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
-		EEF483D019D26A2500B463CA /* bubbleBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleBlue.png; sourceTree = "<group>"; };
-		EEF483D119D26A2500B463CA /* bubbleGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleGreen.png; sourceTree = "<group>"; };
-		EEF483D219D26A2500B463CA /* bubbleRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleRed.png; sourceTree = "<group>"; };
-		EEF483D319D26A2500B463CA /* bubbleRY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleRY.png; sourceTree = "<group>"; };
-		EEF483D419D26A2500B463CA /* bubbleYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleYellow.png; sourceTree = "<group>"; };
 		EEF483D519D26A2500B463CA /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		EEF483D619D26A2500B463CA /* heart3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart3.png; sourceTree = "<group>"; };
 		EEF483D719D26A2500B463CA /* heartBroken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartBroken.png; sourceTree = "<group>"; };
@@ -284,42 +317,61 @@
 				EE96E1C719C7F551000FDA73 /* ViewController.m */,
 				EEFBC0CB19C945F200CF1935 /* HomeScene.h */,
 				EEFBC0CC19C945F200CF1935 /* HomeScene.m */,
-				6384EF971A52B2AB004537C0 /* tutorial_arcade.png */,
+				631EAA1E1A99E67500991593 /* tutorial_arcade.png */,
 				6384EF991A52B552004537C0 /* tutorial_classic.png */,
+				63ED2B671A982A58001293C8 /* Gameback.png */,
 				631AA4D51A33335700527F16 /* GameCenterManager.h */,
 				631AA4D61A33335700527F16 /* GameCenterManager.m */,
+				632254E61A9B2C6700AFFE2B /* menubar.png */,
 				634A623B1A6699F7008210DB /* button_facebook-2.png */,
+				632254E81A9B2DFD00AFFE2B /* exitgame.png */,
 				634A623D1A669A03008210DB /* button_twitter-2.png */,
 				634A62371A6661E3008210DB /* button_facebook.png */,
 				630973311A5C0F75001D32A2 /* CreditView.h */,
 				630973321A5C0F75001D32A2 /* CreditView.m */,
 				63819BDB1A4828A400711CA7 /* TutorialViewController.h */,
 				63819BDC1A4828A400711CA7 /* TutorialViewController.m */,
+				631EAA201A99E6BE00991593 /* pop_arcade_tutorial.png */,
 				6308B4281A5FB20D00EAAF40 /* Pop loading screen.png */,
+				631EAA121A99739C00991593 /* Resized-HMRK4.png */,
+				631EAA141A9973A100991593 /* iTunesArtwork@2x-2.png */,
+				631EAA161A9974D700991593 /* Resized-3KGUX.png */,
 				63819BDE1A4828FB00711CA7 /* PageContentViewController.h */,
 				6386A7961A62954400E02D44 /* POPstart.png */,
 				63819BDF1A4828FB00711CA7 /* PageContentViewController.m */,
+				63ED2B811A988063001293C8 /* pop_main-3.png */,
+				63ED2B651A9713E8001293C8 /* pop_main_popover.png */,
+				63ED2B791A987EFF001293C8 /* background_with_icons.png */,
 				631AA4D81A33338C00527F16 /* AppSpecificValues.h */,
+				63ED2B831A988069001293C8 /* pop.pbw */,
 				6384EF951A52A132004537C0 /* tutorial_frenzy.png */,
 				633C99B51A4A9CAD0017EA2A /* pop_icon_87.png */,
 				6356B3591A50209100F3E339 /* popover.png */,
-				633C99BB1A4A9DFD0017EA2A /* background_with_icons.png */,
 				6356B3571A50206C00F3E339 /* popover_backdrop.png */,
+				631EAA1C1A99C22E00991593 /* pop_classic_ipad.png */,
 				6308B42C1A5FCAB400EAAF40 /* calc.png */,
-				633C99BD1A4A9E060017EA2A /* button_arcade.png */,
-				633C99BF1A4A9E0C0017EA2A /* button_classic.png */,
-				633C99C11A4A9E130017EA2A /* button_frenzy.png */,
+				63ED2B7B1A988011001293C8 /* button_arcade.png */,
+				63ED2B7F1A98801C001293C8 /* button_frenzy.png */,
+				63ED2B7D1A988017001293C8 /* button_classic.png */,
 				631A60DA1A4D6D240002702E /* imageBanner.png */,
 				63FBD5D61A50140C00B270D4 /* background_game.png */,
 				6356B35B1A50222800F3E339 /* pop_main.png */,
 				6384EF941A52A0E8004537C0 /* pop_tutorial_frenzy.psd */,
 				631A60DC1A4D71180002702E /* 1load.png */,
 				631A60DE1A4D711F0002702E /* 2load.png */,
+				63ED2B691A982ADB001293C8 /* background_art.png */,
+				63ED2B6B1A982AFF001293C8 /* Gameover.png */,
 				631A60E01A4D71270002702E /* 3load.png */,
 				634A62391A666488008210DB /* button_twitter.png */,
-				6308B42A1A5FBEA900EAAF40 /* bubbleDavid.png */,
+				631EAA181A99A53800991593 /* pop_splash.png */,
+				6316F4E91A933B77006C0545 /* iphone6-plus-box-space-gray-2014.jpeg */,
+				63ED2B6D1A982BC6001293C8 /* bubbleDavid.png */,
+				6316F4EB1A933B99006C0545 /* 100 Pop Downloads.png */,
 				631A60E21A4D712E0002702E /* 4load.png */,
+				631EAA1A1A99A56C00991593 /* Pop_iPad.png */,
+				631EAA221A99E9F300991593 /* tutorial_frenzy-2.png */,
 				633B3DF61A8B04F5008A72BD /* UIButton+Extensions.h */,
+				631EAA241A99EA1E00991593 /* ipad_frenzy.png */,
 				633B3DF71A8B04F5008A72BD /* UIButton+Extensions.m */,
 				EEFBC0F019CA392A00CF1935 /* Frenzy Mode */,
 				EEFBC0E519C9839000CF1935 /* Classic Mode */,
@@ -330,15 +382,14 @@
 				637841521A5FA28400174D71 /* background_with_art.png */,
 				637841541A5FA42A00174D71 /* trans.png */,
 				6308B4261A5FADD300EAAF40 /* label_tryagain (1).png */,
+				63ED2B6F1A982BFE001293C8 /* bubble.png */,
 				EEF483CE19D26A2500B463CA /* 1.png */,
+				63ED2B711A982C04001293C8 /* bubbleBlue.png */,
 				6384EF9B1A52B7A6004537C0 /* mikado_bold.ttf */,
-				EEF483CF19D26A2500B463CA /* bubble.png */,
 				637841511A5FA1DC00174D71 /* mikado_bold (1).ttf */,
-				EEF483D019D26A2500B463CA /* bubbleBlue.png */,
-				EEF483D119D26A2500B463CA /* bubbleGreen.png */,
-				EEF483D219D26A2500B463CA /* bubbleRed.png */,
-				EEF483D319D26A2500B463CA /* bubbleRY.png */,
-				EEF483D419D26A2500B463CA /* bubbleYellow.png */,
+				63ED2B751A982C0B001293C8 /* bubbleRed.png */,
+				63ED2B731A982C08001293C8 /* bubbleGreen.png */,
+				63ED2B771A987D19001293C8 /* tutorial_classic-2.png */,
 				63F786DC1A7E2F8D0054A069 /* pop_icon_120-2.png */,
 				63F786E01A7E2FCD0054A069 /* pop_icon_180-2.png */,
 				63F786DE1A7E2FB20054A069 /* pop_icon_87-2.png */,
@@ -397,7 +448,6 @@
 		EEFBC0E519C9839000CF1935 /* Classic Mode */ = {
 			isa = PBXGroup;
 			children = (
-				634A62351A666127008210DB /* pop_splash.png */,
 				EE96E1BA19C7E823000FDA73 /* classicScene.h */,
 				EE96E1BB19C7E823000FDA73 /* classicScene.m */,
 				EEE3B24A19CD9D2A0094566A /* ClassicTutScene.h */,
@@ -500,55 +550,71 @@
 			files = (
 				6308B4321A61094300EAAF40 /* Monkeys Spinning Monkeys.mp3 in Resources */,
 				634A62381A6661E3008210DB /* button_facebook.png in Resources */,
+				631EAA151A9973A100991593 /* iTunesArtwork@2x-2.png in Resources */,
 				6308B42E1A60ED4400EAAF40 /* mikado_bold (1).ttf in Resources */,
 				6308B4291A5FB20D00EAAF40 /* Pop loading screen.png in Resources */,
-				633C99BC1A4A9DFD0017EA2A /* background_with_icons.png in Resources */,
 				631A60E31A4D712E0002702E /* 4load.png in Resources */,
+				63ED2B6E1A982BC6001293C8 /* bubbleDavid.png in Resources */,
 				EEF483D819D26A2500B463CA /* 1.png in Resources */,
 				631A60E11A4D71270002702E /* 3load.png in Resources */,
 				5517E26019878393007594A8 /* InfoPlist.strings in Resources */,
 				EED3876219C854AE0052C925 /* Pop.png in Resources */,
 				631A60DD1A4D71180002702E /* 1load.png in Resources */,
 				EEF483E019D26A2500B463CA /* heart3.png in Resources */,
+				63ED2B661A9713E8001293C8 /* pop_main_popover.png in Resources */,
+				631EAA191A99A53800991593 /* pop_splash.png in Resources */,
 				6308B4271A5FADD300EAAF40 /* label_tryagain (1).png in Resources */,
+				631EAA231A99E9F300991593 /* tutorial_frenzy-2.png in Resources */,
 				6308B42D1A5FCAB400EAAF40 /* calc.png in Resources */,
+				63ED2B7C1A988011001293C8 /* button_arcade.png in Resources */,
 				634A623A1A666488008210DB /* button_twitter.png in Resources */,
 				6356B35A1A50209100F3E339 /* popover.png in Resources */,
+				631EAA1D1A99C22E00991593 /* pop_classic_ipad.png in Resources */,
 				6356B35C1A50222800F3E339 /* pop_main.png in Resources */,
 				637841531A5FA28400174D71 /* background_with_art.png in Resources */,
-				6308B42B1A5FBEA900EAAF40 /* bubbleDavid.png in Resources */,
-				EEF483DC19D26A2500B463CA /* bubbleRed.png in Resources */,
+				632254E71A9B2C6700AFFE2B /* menubar.png in Resources */,
+				63ED2B681A982A58001293C8 /* Gameback.png in Resources */,
 				5517E27319878393007594A8 /* Images.xcassets in Resources */,
 				6386A7971A62954400E02D44 /* POPstart.png in Resources */,
+				63ED2B741A982C08001293C8 /* bubbleGreen.png in Resources */,
 				5517E26919878393007594A8 /* Main.storyboard in Resources */,
+				63ED2B7A1A987EFF001293C8 /* background_with_icons.png in Resources */,
 				633C99B61A4A9CAD0017EA2A /* pop_icon_87.png in Resources */,
-				6384EF981A52B2AC004537C0 /* tutorial_arcade.png in Resources */,
+				63ED2B801A98801C001293C8 /* button_frenzy.png in Resources */,
 				631DC9B31A46D4B3000F9FD5 /* Game-Center-icon.png in Resources */,
+				632254E91A9B2DFD00AFFE2B /* exitgame.png in Resources */,
+				63ED2B821A988063001293C8 /* pop_main-3.png in Resources */,
+				631EAA1B1A99A56C00991593 /* Pop_iPad.png in Resources */,
 				6384EF961A52A132004537C0 /* tutorial_frenzy.png in Resources */,
 				634A623E1A669A03008210DB /* button_twitter-2.png in Resources */,
-				633C99C21A4A9E130017EA2A /* button_frenzy.png in Resources */,
 				EEF483E119D26A2500B463CA /* heartBroken.png in Resources */,
 				631A60DF1A4D711F0002702E /* 2load.png in Resources */,
-				EEF483DE19D26A2500B463CA /* bubbleYellow.png in Resources */,
-				EEF483DD19D26A2500B463CA /* bubbleRY.png in Resources */,
+				63ED2B6A1A982ADB001293C8 /* background_art.png in Resources */,
+				631EAA171A9974D700991593 /* Resized-3KGUX.png in Resources */,
 				63F786E11A7E2FCD0054A069 /* pop_icon_180-2.png in Resources */,
-				EEF483DA19D26A2500B463CA /* bubbleBlue.png in Resources */,
 				631A60DB1A4D6D240002702E /* imageBanner.png in Resources */,
-				633C99BE1A4A9E070017EA2A /* button_arcade.png in Resources */,
 				6309732D1A5C0DAF001D32A2 /* popover (1).png in Resources */,
+				63ED2B721A982C04001293C8 /* bubbleBlue.png in Resources */,
+				63ED2B761A982C0B001293C8 /* bubbleRed.png in Resources */,
+				631EAA131A99739C00991593 /* Resized-HMRK4.png in Resources */,
+				631EAA211A99E6BE00991593 /* pop_arcade_tutorial.png in Resources */,
 				634A623C1A6699F7008210DB /* button_facebook-2.png in Resources */,
-				EEF483D919D26A2500B463CA /* bubble.png in Resources */,
+				6316F4EA1A933B77006C0545 /* iphone6-plus-box-space-gray-2014.jpeg in Resources */,
 				63F786DD1A7E2F8D0054A069 /* pop_icon_120-2.png in Resources */,
+				63ED2B781A987D19001293C8 /* tutorial_classic-2.png in Resources */,
+				63ED2B6C1A982AFF001293C8 /* Gameover.png in Resources */,
 				63F786DF1A7E2FB20054A069 /* pop_icon_87-2.png in Resources */,
 				EEF483DF19D26A2500B463CA /* heart.png in Resources */,
-				EEF483DB19D26A2500B463CA /* bubbleGreen.png in Resources */,
+				6316F4EC1A933B99006C0545 /* 100 Pop Downloads.png in Resources */,
 				637841551A5FA42A00174D71 /* trans.png in Resources */,
+				63ED2B7E1A988017001293C8 /* button_classic.png in Resources */,
 				EEFBC0DA19C96B4F00CF1935 /* pop.sks in Resources */,
+				631EAA1F1A99E67500991593 /* tutorial_arcade.png in Resources */,
 				6356B3581A50206C00F3E339 /* popover_backdrop.png in Resources */,
-				634A62361A666127008210DB /* pop_splash.png in Resources */,
-				633C99C01A4A9E0C0017EA2A /* button_classic.png in Resources */,
+				63ED2B701A982BFE001293C8 /* bubble.png in Resources */,
 				6384EF9A1A52B552004537C0 /* tutorial_classic.png in Resources */,
 				EEE3B24519CB02A20094566A /* classicScreenCap.PNG in Resources */,
+				631EAA251A99EA1E00991593 /* ipad_frenzy.png in Resources */,
 				EEFBC0D119C9619D00CF1935 /* pop.mp3 in Resources */,
 				63FBD5D71A50140C00B270D4 /* background_game.png in Resources */,
 			);
@@ -707,15 +773,18 @@
 		5517E28A19878393007594A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pop/Pop-Prefix.pch";
 				INFOPLIST_FILE = "Pop/Pop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "96ce5dd6-16c6-418d-9174-c434f2f36b59";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -723,15 +792,18 @@
 		5517E28B19878393007594A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pop/Pop-Prefix.pch";
 				INFOPLIST_FILE = "Pop/Pop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "96ce5dd6-16c6-418d-9174-c434f2f36b59";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

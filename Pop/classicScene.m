@@ -9,6 +9,7 @@
 #import "classicScene.h"
 #import "GameOverScene.h"
 #import "ClassicTutScene.h"
+#import "HomeScene.h"
 #import <AudioToolbox/AudioServices.h>
 
 
@@ -35,11 +36,73 @@
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     
     self.lastSpawnTimeInterval += timeSinceLast;
-    if (self.lastSpawnTimeInterval > 0.55) {
-        self.lastSpawnTimeInterval = 0;
-        if (isAlertViewActive == NO) {
+    
+    if (numBubbles <= 30) {
+        if (self.lastSpawnTimeInterval > 0.5) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+            }
+            }
+    }
+    
+    else if (numBubbles <= 90 || numBubbles >= 31) {
+        if (self.lastSpawnTimeInterval > 0.52) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
             [self spawnBubble];
+            [self spawnBubble];
+            }}}
+    
+    else if (numBubbles <= 150 || numBubbles >= 91) {
+        if (self.lastSpawnTimeInterval > 0.65) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+                [self spawnBubble];
+                 [self spawnBubble];
+            }}}
+    else if (numBubbles <= 200 || numBubbles >= 151) {
+        if (self.lastSpawnTimeInterval > 0.55) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+                [self spawnBubble];
+                 [self spawnBubble];
+            }}}
+    
+    else if (numBubbles <= 300 || numBubbles >= 201) {
+        if (self.lastSpawnTimeInterval > 0.4) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+                [self spawnBubble];
+                 [self spawnBubble];
+            }}}
+    
+    else if (numBubbles <= 400 || numBubbles >= 301) {
+        if (self.lastSpawnTimeInterval > 0.20) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+                [self spawnBubble];
+                [self spawnBubble];
+                 [self spawnBubble];
+            }}}
+    
+    else {
+        
+        if (self.lastSpawnTimeInterval > 0.19) {
+            self.lastSpawnTimeInterval = 0;
+            if (isAlertViewActive == NO) {
+            [self spawnBubble];
+                [self spawnBubble];
+                [self spawnBubble];}
+            
         }
+        
+        
+        
+        
     }
 }
 
@@ -49,12 +112,35 @@
     }
 }
 
+-(void)longPress:(UILongPressGestureRecognizer*)sender {
+    
+    [self runAction:
+     [SKAction runBlock:^{
+        SKTransition *reveal = [SKTransition crossFadeWithDuration:0.5];
+        SKScene * myScene = [[HomeScene alloc] initWithSize:self.size];
+        [self.view presentScene:myScene transition: reveal];
+        
+        NSString *scene =@"home";
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:scene forKey:@"scene"];
+        [defaults synchronize];
+        
+    }]
+     ];
+
+    
+    
+}
+
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        
+        
+        
                 
         isAlertViewActive = NO;
         
-        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"background_game.png"];
+        SKSpriteNode *backPic = [SKSpriteNode spriteNodeWithImageNamed:@"Gameback.png"];
         backPic.size = CGSizeMake(self.size.width, self.size.height);
         backPic.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:backPic];
@@ -84,6 +170,20 @@
         
         [self addChild:highScoreLabel];
         
+        
+        
+        modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Mikado"];
+        
+        
+        modeLabel.text = @"CLASSIC";
+        modeLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+        modeLabel.fontSize = 30;
+        modeLabel.position = CGPointMake(170, self.size.height-50);
+        modeLabel.color = [SKColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+        modeLabel.alpha = 0.7;
+        
+        [self addChild:modeLabel];
+        
         _updatedHighScore = NO;
     }
     return self;
@@ -92,9 +192,22 @@
 -(void)spawnBubble{
     SKSpriteNode *bubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble.png"];
     
+    NSString *deviceType = [UIDevice currentDevice].model;
+    if([deviceType hasPrefix:@"iPad"])
+    {
+        NSLog(@"iPad");
+        
+        int bubbleSize = arc4random() %25 + 127;
+        bubble.size = CGSizeMake(bubbleSize, bubbleSize);
+        
+        
+    }
+ else {
+    
     int bubbleSize = arc4random() %15 + 80;
     bubble.size = CGSizeMake(bubbleSize, bubbleSize);
-    
+ }
+
     int midPt = self.frame.size.width-bubble.size.width;
     int midPtVert = -self.frame.size.height-bubble.size.height/2;
     int xPt = arc4random() %midPt + bubble.size.width/2;
@@ -103,25 +216,27 @@
     bubble.name = @"BubbleNode";
     
     [self addChild:bubble];
+        
     
+
     numBubbles++;
     
     int minDuration;
     
     if (numBubbles <= 10) {
-        minDuration = 5.0;
+        minDuration = 5.5;
     }
     else if (numBubbles <= 20 || numBubbles >= 11) {
-        minDuration = 3.8;
+        minDuration = 4.3;
     }
     else if (numBubbles <= 30 || numBubbles >= 21) {
-        minDuration = 3.0;
+        minDuration = 3.4;
     }
     else if (numBubbles <= 40 || numBubbles >= 31) {
-        minDuration = 2.6;
+        minDuration = 3.0;
     }
     else if (numBubbles <= 50 || numBubbles >= 41) {
-        minDuration = 2.4;
+        minDuration = 2.0;
     }
     else if (numBubbles <= 60 || numBubbles >= 51) {
         minDuration = 1.6;
@@ -133,13 +248,13 @@
         minDuration = 1.2;
     }
 else if (numBubbles <= 90 || numBubbles >= 81) {
-        minDuration = 1.15;
+        minDuration = 1.05;
     }
     else {
-        minDuration = 1.0;
+        minDuration = 0.95;
     }
     
-    int maxDuration = minDuration + 2.1;
+    int maxDuration = minDuration + 1.0;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
@@ -163,7 +278,7 @@ else if (numBubbles <= 90 || numBubbles >= 81) {
         }
     }];
     [bubble runAction:[SKAction sequence:@[actionMove, loseAction, actionMoveDone]]];
-}
+    }
 
 -(SKEmitterNode *)pop {
     NSString *firePath = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"sks"];
@@ -173,9 +288,12 @@ else if (numBubbles <= 90 || numBubbles >= 81) {
     return burst;
 }
 
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch * touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
+
     
     SKSpriteNode *touchedNode = (SKSpriteNode *)[self nodeAtPoint:location];
     
